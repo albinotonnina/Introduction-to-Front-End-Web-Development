@@ -15,8 +15,8 @@ var appendSlides = function (data, callback) {
                 }));
                 count++;
 
-                if(count === steps.length){
-                    if(typeof callback === 'function'){
+                if (count === steps.length) {
+                    if (typeof callback === 'function') {
                         callback();
                     }
                 }
@@ -27,54 +27,93 @@ var appendSlides = function (data, callback) {
 };
 
 
-function init(){
+var initReveal = function () {
+    Reveal.initialize({
+        controls: false,
+        progress: false,
+        history: true,
+        center: true,
+        showNotes: false,
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        dependencies: [
+
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+                return !!document.querySelector('pre code');
+            }, callback: function () {
+                hljs.initHighlightingOnLoad();
+                hljs.initHighlighting();
+            }
+            },
+            {
+                src: 'plugin/live-coding/live-coding.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            //{src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ],
+        width: 1280,
+        height: 900,
+        margin: 0.1,
+        minScale: 0.2,
+        maxScale: 1.5
+    });
+};
+
+
+
+var preloadPictures = function(pictureUrls, callback) {
+    var i,
+        j,
+        loaded = 0;
+
+    for (i = 0, j = pictureUrls.length; i < j; i++) {
+        (function (img, src) {
+            img.onload = function () {
+                if (++loaded == pictureUrls.length && callback) {
+                    callback();
+                }
+            };
+
+            // Use the following callback methods to debug
+            // in case of an unexpected behavior.
+            img.onerror = function () {};
+            img.onabort = function () {};
+
+            img.src = src;
+        } (new Image(), pictureUrls[i]));
+    }
+};
+
+
+
+
+
+function init() {
     $.getJSON('steps/list.json', function (data) {
-        // Append ordered slides
-        appendSlides(data, function(){
+        appendSlides(data, function () {
 
-            $( '.resizable' ).resizable();
-
-            // Full list of configuration options available at:
-            // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-                controls: false,
-                progress: false,
-                history: true,
-                center: false,
-                showNotes:false,
-                transition: 'fade', // none/fade/slide/convex/concave/zoom
-                dependencies: [
-
-                    {src: 'lib/js/classList.js', condition: function () {return !document.body.classList;}},
-                    {src: 'plugin/markdown/marked.js', condition: function () {return !!document.querySelector('[data-markdown]');}},
-                    {src: 'plugin/markdown/markdown.js', condition: function () {return !!document.querySelector('[data-markdown]');}},
-                    {src: 'plugin/highlight/highlight.js', async: true, condition: function () {return !!document.querySelector('pre code');}, callback: function () {
-                            hljs.initHighlightingOnLoad();
-                            hljs.initHighlighting();
-                        }
-                    },
-                    {src: 'plugin/live-coding/live-coding.js', async: true, condition: function () {return !!document.body.classList;}},
-                    {src: 'plugin/zoom-js/zoom.js', async: true},
-                    {src: 'plugin/notes/notes.js', async: true}
-                ],
-                width: 1280,
-                height: 900,
-
-                // Factor of the display size that should remain empty around the content
-                margin: 0.1,
-
-                // Bounds for smallest/largest possible scale to apply to content
-                minScale: 0.2,
-                maxScale: 1.5
+            var imgsrc = [];
+            $('img').each(function() {
+                imgsrc.push(this.src);
             });
 
+            preloadPictures(imgsrc, function(){
+                initReveal();
+            });
 
         });
 
     });
 }
 
-$(function() {
+$(function () {
     init();
 
 });

@@ -1,0 +1,186 @@
+<section>
+    <h2>Introduction to Front End Web Development</h2>
+    <h3>0) How browsers work</h3>
+</section>
+<section>
+    <h3>Main desktop browsers</h3>
+    <img class="browsers" src="../lib/images/browsers/main-desktop.png"/>
+    <h3>Main mobile browsers</h3>
+    <img class="browsers" src="../lib/images/browsers/main-mobile.png"/>
+</section>
+
+<section>
+    <h3>Other browsers</h3>
+    <img class="browser" src="../lib/images/browsers/airweb_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/android_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/avant_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/boat_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/brave_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/chromium_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/cm_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/coast_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/diigo_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/dolphin_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/dooble_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/epic_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/firefox-nightly_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/iceweasel_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/k-meleon_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/konqueror_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/lightning_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/mercury_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/midori_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/mihtool_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/netsurf_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/omega_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/omniweb_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/orbitum_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/pale-moon_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/puffin_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/rekonq_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/seamonkey_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/silk_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/sleipnir-mac_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/tor_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/uc_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/vivaldi_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/waterfox_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/web_256x256.png"/>
+    <img class="browser" src="../lib/images/browsers/yandex_256x256.png"/>
+</section>
+
+<section>
+    <h3>Browser components</h3>
+    <ol>
+        <li class="fragment fade-in"><h4>The user interface</h4></li>
+        <li class="fragment fade-in"><h4>The browser engine</h4></li>
+        <li class="fragment fade-in"><h4>The rendering engine</h4></li>
+        <li class="fragment fade-in"><h4>Networking</h4></li>
+        <li class="fragment fade-in"><h4>UI backend</h4></li>
+        <li class="fragment fade-in"><h4>JavaScript interpreter.</h4></li>
+        <li class="fragment fade-in"><h4>Data storage.</h4></li>
+    </ol>
+</section>
+
+<section>
+    <h3>Browser components</h3>
+    <ol>
+        <li class="muted"><h4>The user interface</h4></li>
+        <li class="muted"><h4>The browser engine</h4></li>
+        <li><h4><strong>The rendering engine</strong></h4></li>
+        <li class=muted><h4>Networking</h4></li>
+        <li class="muted"><h4>UI backend</h4></li>
+        <li class="muted"><h4>JavaScript interpreter.</h4></li>
+        <li class="muted"><h4>Data storage.</h4></li>
+    </ol>
+
+    <aside class="notes">
+        <p>
+            Firefox, Chrome and Safari are built upon two rendering engines. Firefox uses Gecko - a "home made" Mozilla rendering engine. Both Safari and Chrome use Webkit.
+        </p>
+        <p>
+            The way the browser interprets and displays HTML files is specified in the HTML and CSS specifications. These specifications are maintained by the W3C (World Wide Web
+            Consortium) organization, which is the standards organization for the web.
+            The current version of HTML is 4 (http://www.w3.org/TR/html401/). Version 5 is in progress. The current CSS version is 2 (http://www.w3.org/TR/CSS2/) and version 3 is
+            in
+            progress.
+            For years browsers conformed to only a part of the specifications and developed their own extensions. That caused serious compatibility issues for web authors. Today
+            most
+            of the browsers more or less conform to the specifications.
+
+        <ol>
+            <li>The user interface - this includes the address bar, back/forward button, bookmarking menu etc. Every part of the browser display except the main window where you
+                see the requested page.
+            </li>
+            <li>The browser engine - the interface for querying and manipulating the rendering engine.</li>
+            <li>The rendering engine - responsible for displaying the requested content. For example if the requested content is HTML, it is responsible for parsing the HTML and
+                CSS and displaying the parsed content on the screen.
+            </li>
+            <li>Networking - used for network calls, like HTTP requests. It has platform independent interface and underneath implementations for each platform.</li>
+            <li>UI backend - used for drawing basic widgets like combo boxes and windows. It exposes a generic interface that is not platform specific. Underneath it uses the
+                operating system user interface methods.
+            </li>
+            <li>JavaScript interpreter. Used to parse and execute the JavaScript code.</li>
+            <li>Data storage. This is a persistence layer. The browser needs to save all sorts of data on the hard disk, for examples, cookies. The new HTML specification (HTML5)
+                defines 'web database' which is a complete (although light) database in the browser.
+            </li>
+
+        </ol>
+        </p>
+    </aside>
+</section>
+
+
+<section>
+    <h3>page.html</h3>
+
+    <!--@formatter:off-->
+    <pre><code>
+    &lt;!DOCTYPE html>
+
+    &lt;html>
+
+        &lt;head>
+
+            &lt;link href="style.css" rel="stylesheet">
+
+            &lt;title>Title&lt;/title>
+
+        &lt;/head>
+
+        &lt;body>
+
+            <p>Hello <span>world!</span></p>
+
+            <div>
+
+                &lt;img src="photo.jpg">
+
+            </div>
+
+        &lt;/body>
+
+    &lt;/html>
+    </code></pre>
+    <!--@formatter:on-->
+</section>
+
+<section>
+    <h3>style.css</h3>
+
+    <!--@formatter:off-->
+    <pre><code class="css">
+    body {
+        font-size: 16px;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    p span {
+        display: none;
+    }
+
+    img {
+        float: right;
+    }
+    </code></pre>
+    <!--@formatter:on-->
+</section>
+
+
+<section>
+    <h3>The rendering engine flow</h3>
+    <ol>
+        <li class="fragment fade-in"><h3>Process <strong>HTML</strong> markup and build the <strong>DOM</strong> tree</h3></li>
+        <li class="fragment fade-in"><h3>Process <strong>CSS</strong> markup and build the <strong>CSSOM</strong> tree</h3></li>
+        <li class="fragment fade-in"><h3>Combine the DOM and CSSOM into a <strong>render tree</strong></h3></li>
+        <li class="fragment fade-in"><h3>Run <strong>layout</strong> on the render tree to compute <strong>geometry</strong> of each node</h3></li>
+        <li class="fragment fade-in"><h3><strong>Paint</strong> the individual nodes to the screen</h3></li>
+    </ol>
+</section>
+
+
+
+

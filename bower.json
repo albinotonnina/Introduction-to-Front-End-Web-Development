@@ -1,5 +1,5 @@
 {
-  "name": "Bootstrap Grids",
+  "name": "HTML/CSS workshop",
   "version": "1.0.0",
   "main": [
     "js/reveal.js",
@@ -16,7 +16,9 @@
     "handlebars": "~4.0.3",
     "jquery-ui": "~1.11.4",
     "responsive-toolkit": "~2.5.0",
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass": "~3.3.5",
+    "jsPlumb": "jsplumb#~2.0.6",
+    "jquery.preload": "~1.0.3"
   },
   "repository": {
     "type": "git",
@@ -27,5 +29,6 @@
     "node_modules",
     "bower_components",
     "test"
-  ]
+  ],
+  "devDependencies": {}
 }

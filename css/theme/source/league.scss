@@ -27,8 +27,45 @@ $heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b
 	@include radial-gradient( rgba(28,30,32,1), rgba(85,90,95,1) );
 }
 
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+.reveal strong {
+	color: #f68220;
+}
+
+li{
+	padding-bottom:$blockMargin;
+
+	&.muted{
+		opacity:0.5;
+	}
+}
+
+.reveal h4{
+	margin: 0;
+	text-transform: none;
+	font-size: 1.5em;
+}
+
+.reveal section img{
+
+	&.browsers, &.wide{
+		border:none;
+		background: none;
+		box-shadow: none;
+	}
+
+	&.browser{
+		border:none;
+		background: none;
+		box-shadow: none;
+		width:128px;
+	}
+
+}
