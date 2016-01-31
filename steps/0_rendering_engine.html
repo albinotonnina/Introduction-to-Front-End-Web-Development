@@ -60,6 +60,25 @@
         <li class="fragment fade-in"><h4>JavaScript interpreter.</h4></li>
         <li class="fragment fade-in"><h4>Data storage.</h4></li>
     </ol>
+
+    <aside class="notes">
+        <ol>
+            <li>The user interface - this includes the address bar, back/forward button, bookmarking menu etc. Every part of the browser display except the main window where you
+                see the requested page.</li>
+            <li>The browser engine - the interface for querying and manipulating the rendering engine.</li>
+            <li>The rendering engine - responsible for displaying the requested content. For example if the requested content is HTML, it is responsible for parsing the HTML and
+                CSS and displaying the parsed content on the screen.</li>
+            <li>Networking - used for network calls, like HTTP requests.</li>
+            <li>UI backend - used for drawing basic widgets like combo boxes and windows. It exposes a generic interface that is not platform specific. Underneath it uses the
+                operating system user interface methods.</li>
+            <li>JavaScript interpreter. Used to parse and execute the JavaScript code.</li>
+            <li>Data storage. This is a persistence layer. The browser needs to save all sorts of data on the hard disk, for examples, cookies. The new HTML specification (HTML5)
+                defines 'web database' which is a complete (although light) database in the browser.
+            </li>
+
+        </ol>
+    </aside>
+
 </section>
 
 <section>
@@ -79,33 +98,11 @@
             Firefox, Chrome and Safari are built upon two rendering engines. Firefox uses Gecko - a "home made" Mozilla rendering engine. Both Safari and Chrome use Webkit.
         </p>
         <p>
-            The way the browser interprets and displays HTML files is specified in the HTML and CSS specifications. These specifications are maintained by the W3C (World Wide Web
+            The way the rendering engine interprets and displays HTML files is specified in the HTML and CSS specifications. These specifications are maintained by the W3C (World Wide Web
             Consortium) organization, which is the standards organization for the web.
             The current version of HTML is 4 (http://www.w3.org/TR/html401/). Version 5 is in progress. The current CSS version is 2 (http://www.w3.org/TR/CSS2/) and version 3 is
-            in
-            progress.
-            For years browsers conformed to only a part of the specifications and developed their own extensions. That caused serious compatibility issues for web authors. Today
-            most
-            of the browsers more or less conform to the specifications.
-
-        <ol>
-            <li>The user interface - this includes the address bar, back/forward button, bookmarking menu etc. Every part of the browser display except the main window where you
-                see the requested page.
-            </li>
-            <li>The browser engine - the interface for querying and manipulating the rendering engine.</li>
-            <li>The rendering engine - responsible for displaying the requested content. For example if the requested content is HTML, it is responsible for parsing the HTML and
-                CSS and displaying the parsed content on the screen.
-            </li>
-            <li>Networking - used for network calls, like HTTP requests. It has platform independent interface and underneath implementations for each platform.</li>
-            <li>UI backend - used for drawing basic widgets like combo boxes and windows. It exposes a generic interface that is not platform specific. Underneath it uses the
-                operating system user interface methods.
-            </li>
-            <li>JavaScript interpreter. Used to parse and execute the JavaScript code.</li>
-            <li>Data storage. This is a persistence layer. The browser needs to save all sorts of data on the hard disk, for examples, cookies. The new HTML specification (HTML5)
-                defines 'web database' which is a complete (although light) database in the browser.
-            </li>
-
-        </ol>
+            in progress. For years browsers conformed to only a part of the specifications and developed their own extensions. That caused serious compatibility issues for web authors. Today
+            most of the browsers more or less conform to the specifications.
         </p>
     </aside>
 </section>
