@@ -6123,6 +6123,9 @@ li {
   li.muted {
     opacity: 0.5; }
 
+.reveal li {
+  font-size: 34px; }
+
 .reveal h4 {
   margin: 0;
   text-transform: none;
