@@ -1,8 +1,29 @@
 <section>
     <h3>5) <strong>Paint</strong> the individual nodes to the screen</h3>
-    <h4>Finally!</h4>
 </section>
 
+<section>
+    <h3>5) <strong>Paint</strong> the individual nodes to the screen</h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul>
+                    <li>The process has visual information about every element of the render tree</li>
+                    <li class="fragment fade-in">it will create layers, from bottom to top</li>
+                    <li class="fragment fade-in">absolute positioned elements and children has their own layers</li>
+                    <li class="fragment fade-in">incremental process, builds up over 12 phases, first background, then borders etc</li>
+                    <li class="fragment fade-in">it produces bitmaps, upload them in the gpu as a texture, composites them into a final image to render to the screen</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Final output</h3>
+    <img class="wide" src="../lib/images/rendering_engine_flow/dom.png"/>
+</section>
 <section>
     <h3>Final output</h3>
     <img class="wide" src="../lib/images/rendering_engine_flow/final.png"/>
