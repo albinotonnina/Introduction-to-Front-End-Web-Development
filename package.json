@@ -1,5 +1,5 @@
 {
-  "name": "bootstrapgridsystem",
+  "name": "introduction to frontend development",
   "version": "1.0.0",
   "description": "",
   "homepage": "www.albinotonnina.com",
@@ -10,39 +10,34 @@
     "start": "node ./index.js"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "",
+    "email": "",
+    "web": ""
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:albinotonnina/bootstrapgridsystem.git"
+    "url": "git@github.com:albinotonnina/Introduction-to-Front-End-Web-Development.git"
   },
   "engines": {
     "node": "~4.1.1"
   },
-  "window": {
-    "toolbar": false,
-    "width": 800,
-    "height": 500
-  },
   "dependencies": {
+    "underscore": "~1.8.3",
     "express": "~4.13.3",
-    "less": "^2.5.3",
     "mustache": "~2.1.3",
-    "socket.io": "~1.3.7",
-    "underscore": "~1.8.3"
+    "socket.io": "~1.3.7"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-autoprefixer": "~3.0.3",
-    "grunt-contrib-connect": "~0.11.2",
-    "grunt-contrib-cssmin": "~0.14.0",
+    "grunt-contrib-qunit": "~0.7.0",
     "grunt-contrib-jshint": "~0.11.3",
+    "grunt-contrib-cssmin": "~0.14.0",
     "grunt-contrib-uglify": "~0.9.2",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-sass": "~1.1.0-beta",
+    "grunt-contrib-connect": "~0.11.2",
+    "grunt-autoprefixer": "~3.0.3",
     "grunt-zip": "~0.17.1",
+    "grunt": "~0.4.5",
     "node-sass": "~3.3.3"
   },
   "license": "MIT"

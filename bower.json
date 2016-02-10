@@ -16,7 +16,7 @@
     "handlebars": "~4.0.3",
     "jquery-ui": "~1.11.4",
     "responsive-toolkit": "~2.5.0",
-    "bootstrap-sass": "~3.3.5",
+    "bootstrap-sass": "~3.3.6",
     "jsPlumb": "jsplumb#~2.0.6",
     "jquery.preload": "~1.0.3"
   },
