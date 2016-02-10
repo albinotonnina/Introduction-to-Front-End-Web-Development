@@ -1,7 +1,9 @@
 var appendSlides = function (data, callback) {
 
     var steps = data;
+
     var htmltemplate = $('#step-template').html();
+    $('#step-template').html('');
     var htmltempl = Handlebars.compile(htmltemplate);
     var count = 0;
     steps.forEach(function (step) {
@@ -28,6 +30,8 @@ var appendSlides = function (data, callback) {
 
 
 var initReveal = function () {
+
+
     Reveal.initialize({
         controls: false,
         progress: false,
@@ -64,11 +68,11 @@ var initReveal = function () {
         minScale: 0.2,
         maxScale: 1.5
     });
+
 };
 
 
-
-var preloadPictures = function(pictureUrls, callback) {
+var preloadPictures = function (pictureUrls, callback) {
     var i,
         j,
         loaded = 0;
@@ -83,30 +87,32 @@ var preloadPictures = function(pictureUrls, callback) {
 
             // Use the following callback methods to debug
             // in case of an unexpected behavior.
-            img.onerror = function () {};
-            img.onabort = function () {};
+            img.onerror = function () {
+            };
+            img.onabort = function () {
+            };
 
             img.src = src;
-        } (new Image(), pictureUrls[i]));
+        }(new Image(), pictureUrls[i]));
     }
 };
 
 
+function init(jsonfile) {
+    $.getJSON('/steps' + jsonfile + '/list.json', function (data) {
 
-
-
-function init() {
-    $.getJSON('steps/list.json', function (data) {
         appendSlides(data, function () {
-
-            var imgsrc = [];
-            $('img').each(function() {
-                imgsrc.push(this.src);
-            });
-
-            preloadPictures(imgsrc, function(){
+            if ($('img').length === 0) {
                 initReveal();
-            });
+            } else {
+                var imgsrc = [];
+                $('img').each(function () {
+                    imgsrc.push(this.src);
+                });
+                preloadPictures(imgsrc, function () {
+                    initReveal();
+                });
+            }
 
         });
 
@@ -114,6 +120,5 @@ function init() {
 }
 
 $(function () {
-    init();
-
+    init(window.location.pathname);
 });
