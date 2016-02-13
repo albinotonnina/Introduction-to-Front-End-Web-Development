@@ -20,10 +20,7 @@ router.get('/level:level/', function(req, res) {
 
     var options = {
         root: __dirname + '/',
-        dotfiles: 'deny',
-        headers: {
-            'x-level': levelNum
-        }
+        dotfiles: 'deny'
     };
 
 

@@ -119,6 +119,3 @@ function init(jsonfile) {
     });
 }
 
-$(function () {
-    init(window.location.pathname);
-});

@@ -1,0 +1,31 @@
+figure.avatar {
+
+  &.inline{
+    display:inline-block;
+  }
+
+  img {
+    .avatar-img(48px);
+  }
+
+  &-xs img {
+    .avatar-img(24px);
+  }
+
+  &-sm img {
+    .avatar-img(32px);
+  }
+
+  &-lg img {
+    .avatar-img(64px);
+  }
+
+  .avatar-img(@size) {
+    @radius: @size / 2;
+    width: @size;
+    height: @size;
+    border-radius: @radius;
+    vertical-align: middle;
+    border: 1px solid #c5c6c7;
+  }
+}
