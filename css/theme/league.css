@@ -6131,6 +6131,10 @@ li {
   text-transform: none;
   font-size: 1.5em; }
 
+.reveal pre {
+  margin: 0;
+  width: 100%; }
+
 .reveal section img.browsers, .reveal section img.wide {
   border: none;
   background: none;
