@@ -78,3 +78,25 @@ li{
 	}
 
 }
+
+.cleanslate {
+	h1,h2,h3,h4,h5,h6{
+		padding: .83em 0 !important;
+	}
+	h1{
+		display: block !important;
+		font-size: 2em !important;
+		margin-top: 0.67em !important;
+		margin-bottom: 0.67em !important;
+		margin-left: 0;
+		margin-right: 0 !important;
+		font-weight: bold !important;
+		padding: 0 !important;
+	}
+
+	h6{
+
+			font-size: .67em !important;
+
+	}
+}

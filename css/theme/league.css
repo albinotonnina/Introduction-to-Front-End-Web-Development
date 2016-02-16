@@ -6145,3 +6145,19 @@ li {
   background: none;
   box-shadow: none;
   width: 128px; }
+
+.cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6 {
+  padding: .83em 0 !important; }
+
+.cleanslate h1 {
+  display: block !important;
+  font-size: 2em !important;
+  margin-top: 0.67em !important;
+  margin-bottom: 0.67em !important;
+  margin-left: 0;
+  margin-right: 0 !important;
+  font-weight: bold !important;
+  padding: 0 !important; }
+
+.cleanslate h6 {
+  font-size: .67em !important; }
