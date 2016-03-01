@@ -6552,7 +6552,7 @@ li {
   font-size: 1.5em; }
 
 .reveal pre {
-  margin: 0;
+  margin: 0 0 32px 0;
   width: 100%; }
 
 .reveal li code {
