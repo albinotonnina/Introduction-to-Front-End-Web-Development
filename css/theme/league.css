@@ -6532,6 +6532,8 @@ body {
     text-shadow: none;
     line-height: 1;
     text-transform: initial; }
+  .reveal .cleantags li {
+    font-size: initial; }
 
 .reveal strong {
   color: #f68220; }
@@ -6574,3 +6576,34 @@ li {
   background: none;
   box-shadow: none;
   width: 128px; }
+
+nav {
+  position: absolute;
+  bottom: 32px;
+  z-index: 2;
+  left: 32px; }
+  nav .dropdown-toggle {
+    background: none;
+    border: none; }
+  nav a {
+    font-size: 32px;
+    color: white; }
+    nav a:hover {
+      text-decoration: none;
+      color: grey; }
+    nav a svg {
+      vertical-align: middle; }
+  nav ul.dropdown-menu {
+    padding: 0;
+    background: none; }
+    nav ul.dropdown-menu li {
+      list-style: none;
+      margin: 0;
+      padding-top: 16px; }
+      nav ul.dropdown-menu li a {
+        font-size: 32px;
+        color: white; }
+        nav ul.dropdown-menu li a:hover {
+          text-decoration: none;
+          color: grey;
+          background: none; }

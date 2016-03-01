@@ -5,92 +5,139 @@
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-
-
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
-
-
-
 // Include theme-specific fonts
 @import url(../../lib/font/league-gothic/league-gothic.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
 // Override theme settings (see ../template/settings.scss)
-$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
-$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+$headingTextShadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 20px 20px rgba(0, 0, 0, .15);
 
 // Background generator
 @mixin bodyBackground() {
-	@include radial-gradient( rgba(28,30,32,1), rgba(85,90,95,1) );
+  @include radial-gradient(rgba(28, 30, 32, 1), rgba(85, 90, 95, 1));
 }
 
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-
 
 // Theme template ------------------------------
 @import "../template/theme";
 @import "../template/cleantags";
 // ---------------------------------------------
 
-
 .reveal strong {
-	color: #f68220;
+  color: #f68220;
 }
 
-li{
-	padding-bottom:$blockMargin;
+li {
+  padding-bottom: $blockMargin;
 
-	&.muted{
-		opacity:0.5;
-	}
+  &.muted {
+    opacity: 0.5;
+  }
 }
 
-.reveal li{
-	font-size: 34px;
+.reveal li {
+  font-size: 34px;
 }
 
-.reveal h4{
-	margin: 0;
-	text-transform: none;
-	font-size: 1.5em;
+.reveal h4 {
+  margin: 0;
+  text-transform: none;
+  font-size: 1.5em;
 }
 
-.reveal pre{
-	margin:0;
-	width:100%;
+.reveal pre {
+  margin: 0;
+  width: 100%;
 }
 
-.reveal li code{
-	color: #f68220;
+.reveal li code {
+  color: #f68220;
 }
 
-.reveal code.cleantags{
-	background: white;
-	font-size: 0.5em;
-	color: #000;
-	text-align: left;
-	font-family: "Times New Roman" !important;
-	padding:0;
-
-}
-
-.reveal section img{
-
-	&.browsers, &.wide{
-		border:none;
-		background: none;
-		box-shadow: none;
-	}
-
-	&.browser{
-		border:none;
-		background: none;
-		box-shadow: none;
-		width:128px;
-	}
+.reveal code.cleantags {
+  background: white;
+  font-size: 0.5em;
+  color: #000;
+  text-align: left;
+  font-family: "Times New Roman" !important;
+  padding: 0;
 
 }
 
+.reveal section img {
+
+  &.browsers, &.wide {
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
+
+  &.browser {
+    border: none;
+    background: none;
+    box-shadow: none;
+    width: 128px;
+  }
+
+}
+
+nav {
+  position: absolute;
+  bottom: 32px;
+  z-index: 2;
+  left: 32px;
+
+  .dropdown-toggle {
+    background: none;
+    border: none;
+  }
+
+  a {
+    font-size: 32px;
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+      color: grey;
+
+    }
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  ul.dropdown-menu {
+    padding: 0;
+    background: none;
+
+    li {
+      list-style: none;
+
+      margin: 0;
+      padding-top: 16px;
+
+      &:hover{
+
+      }
+
+      a {
+        font-size: 32px;
+        color: white;
+
+        &:hover {
+          text-decoration: none;
+          color: grey;
+          background:none;
+        }
+
+      }
+    }
+  }
+}

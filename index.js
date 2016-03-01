@@ -16,8 +16,6 @@ router.get('/', function(req, res) {
 
 router.get('/level:level/', function(req, res) {
 
-    var levelNum = req.params.level;
-
     var options = {
         root: __dirname + '/',
         dotfiles: 'deny'
@@ -25,6 +23,16 @@ router.get('/level:level/', function(req, res) {
 
 
     res.sendFile(path.join('slides.html'),options);
+});
+
+router.get('/exercises/', function(req, res) {
+
+    var options = {
+        root: __dirname + '/',
+        dotfiles: 'deny'
+    };
+
+    res.sendFile(path.join('exercises.html'),options);
 });
 
 app.use('/', router);
