@@ -37,7 +37,7 @@ var initReveal = function () {
         progress: false,
         history: true,
         center: true,
-        showNotes: false,
+        showNotes: true,
         transition: 'fade', // none/fade/slide/convex/concave/zoom
         dependencies: [
 

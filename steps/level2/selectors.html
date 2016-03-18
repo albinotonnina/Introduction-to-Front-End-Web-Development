@@ -1,0 +1,59 @@
+
+<section>
+    <h2>CSS selectors specificity</h2>
+    <div style="height: 600px;">
+        <p data-height="600" data-theme-id="22750" data-slug-hash="GZjyZx" data-default-tab="html" data-user="albino"
+           class="codepen">See the Pen <a href="http://codepen.io/albino/pen/GZjyZx/">Css specificity</a> by Albino
+            Tonnina (<a href="http://codepen.io/albino">@albino</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+</section>
+
+
+<section>
+    <h2>CSS selectors specificity calculator</h2>
+
+    <input id="specificity-input" type="text" value="ul#nav li.active a"/>
+
+    <button class="btn btn-primary" id="get-specificity">get specificity</button>
+
+    <div style="margin-top:32px;height:400px;overflow: scroll;">
+        <table id="specificity-results"></table>
+    </div>
+    <button class="btn btn-default" id="reset-specificity-results" style="display:none;">reset result</button>
+    <script>
+
+        var userSearches = [];
+
+        $('#reset-specificity-results').on('click', function () {
+            $('#specificity-results').html('');
+            userSearches = [];
+        });
+
+        $('#get-specificity').on('click', function () {
+
+            var userInput = $('#specificity-input').val();
+            var specObj = SPECIFICITY.calculate(userInput);
+
+            if (specObj && userSearches.indexOf(specObj[0].selector) === -1) {
+                $('#reset-specificity-results').show();
+                userSearches.push(specObj[0].selector);
+                $('#specificity-results').append('<tr><td>' + specObj[0].selector + '</td><td>' + specObj[0].specificity + '</td></tr>');
+            }
+
+
+        });
+
+
+    </script>
+</section>
+
+<section>
+    <h2>Simple page layout</h2>
+    <div style="height:700px">
+        <p data-height="700" data-theme-id="0" data-slug-hash="grwYEM" data-default-tab="result" data-user="albino"
+           class="codepen">See the Pen <a href="http://codepen.io/albino/pen/grwYEM/">Layout</a> by Albino Tonnina (<a
+                href="http://codepen.io/albino">@albino</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+</section>
