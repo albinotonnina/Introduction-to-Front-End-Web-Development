@@ -1,0 +1,70 @@
+<section>
+    <h2><strong>cascading</strong> style sheets</h2>
+
+    <p>The cascade is a fundamental feature of CSS.</p>
+    <p>It is an algorithm defining how to combine properties values originating from different sources.</p>
+
+</section>
+
+<section>
+    <h2>CSS selectors specificity: <strong>the problem</strong></h2>
+    <div style="height: 600px;">
+        <p data-height="600" data-theme-id="22750" data-slug-hash="GZjyZx" data-default-tab="html" data-user="albino"
+           class="codepen">See the Pen <a href="http://codepen.io/albino/pen/GZjyZx/">Css specificity</a> by Albino
+            Tonnina (<a href="http://codepen.io/albino">@albino</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+</section>
+
+<section>
+    <h2>Cascade: <strong>Sources of styles</strong></h2>
+    <h3>ordered by importance</h3>
+    <ul>
+        <li>Browser default styles</li>
+        <li>User styles</li>
+        <li>Author styles</li>
+        <li>Author !important declarations</li>
+        <li>User !important declarations</li>
+
+
+    </ul>
+</section>
+
+<section>
+
+    <h2>Cascade: <strong>Author styles</strong></h2>
+    <h3>ordered by importance</h3>
+
+    <ul>
+
+        <li class="fragment fade-in">
+            <!--@formatter:off-->
+<pre><code>     &lt;link rel="stylesheet" type="text/css" href="styles.css" />
+
+</code></pre>
+            <!--@formatter:on-->
+            External styles are styles that are written in a separate document.
+        </li>
+
+
+        <li class="fragment fade-in">
+            <!--@formatter:off-->
+<pre><code>     &lt;style type="text/css"> p { color: #00f; } &lt;/style>
+
+</code></pre>
+            <!--@formatter:on-->
+            Embedded styles are styles that are embedded in the head of the document.
+        </li>
+
+        <li class="fragment fade-in">
+            <!--@formatter:off-->
+<pre><code>     &lt;a href="#" style="text-decoration: none; color: blue;">
+
+</code></pre>
+            Inline styles are styles that are written directly in the tag on the document.
+            <!--@formatter:on-->
+        </li>
+
+    </ul>
+
+</section>

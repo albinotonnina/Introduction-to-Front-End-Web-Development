@@ -8,6 +8,715 @@
  */
 @import url(../../lib/font/league-gothic/league-gothic.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #1c1e20;
+  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
+  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background-color: #2b2b2b; }
+
+.reveal {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: #eee; }
+
+::selection {
+  color: #fff;
+  background: #FF5E99;
+  text-shadow: none; }
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #eee;
+  font-family: "League Gothic", Impact, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 3.77em; }
+
+.reveal h2 {
+  font-size: 2.11em; }
+
+.reveal h3 {
+  font-size: 1.55em; }
+
+.reveal h4 {
+  font-size: 1em; }
+
+.reveal h1 {
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q,
+.reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #13DAEC;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #71e9f4;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #0d99a5; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #13DAEC;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #13DAEC; }
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #13DAEC; }
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #13DAEC; }
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #13DAEC; }
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #71e9f4; }
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #71e9f4; }
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #71e9f4; }
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #71e9f4; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #13DAEC;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+  color: #13DAEC; }
+
+.reveal .cleantags {
+  /* children of the <head> element all have display:none */
+  /* generic block-level elements */
+  /* heading elements */
+  /* tables */
+  /* for tables without table section elements (can happen with XHTML or dynamically created tables) */
+  /* lists */
+  /* form elements */
+  /* progress */
+  /* inline elements */
+  /* states */
+  /* Read-only text fields do not show a focus ring but do still receive focus */
+  /* HTML5 ruby elements */
+  /* other elements */
+  /* page */
+  /* noscript is handled internally, as it depends on settings */
+  /* HTML 4.01 */ }
+  .reveal .cleantags html {
+    display: block; }
+  .reveal .cleantags head {
+    display: none; }
+  .reveal .cleantags meta {
+    display: none; }
+  .reveal .cleantags title {
+    display: none; }
+  .reveal .cleantags link {
+    display: none; }
+  .reveal .cleantags style {
+    display: none; }
+  .reveal .cleantags script {
+    display: none; }
+  .reveal .cleantags body {
+    display: block;
+    margin: 8px; }
+  .reveal .cleantags p {
+    display: block;
+    margin: 1.0em 0px; }
+  .reveal .cleantags div {
+    display: block; }
+  .reveal .cleantags layer {
+    display: block; }
+  .reveal .cleantags article, .reveal .cleantags aside, .reveal .cleantags footer, .reveal .cleantags header, .reveal .cleantags hgroup, .reveal .cleantags nav, .reveal .cleantags section {
+    display: block; }
+  .reveal .cleantags marquee {
+    display: inline-block;
+    overflow: -webkit-marquee; }
+  .reveal .cleantags address {
+    display: block; }
+  .reveal .cleantags blockquote {
+    display: block;
+    margin: 1em 40px 1em 40px; }
+  .reveal .cleantags q {
+    display: inline; }
+  .reveal .cleantags q:before {
+    content: '"'; }
+  .reveal .cleantags q:after {
+    content: '"'; }
+  .reveal .cleantags center {
+    display: block;
+    /* special centering to be able to emulate the html4/netscape behaviour */
+    text-align: -webkit-center; }
+  .reveal .cleantags hr {
+    display: block;
+    margin: 0.5em auto;
+    border-style: inset;
+    border-width: 1px; }
+  .reveal .cleantags map {
+    display: inline; }
+  .reveal .cleantags h1 {
+    display: block;
+    font-size: 2em;
+    margin: .67em 0 .67em 0;
+    font-weight: bold; }
+  .reveal .cleantags h2 {
+    display: block;
+    font-size: 1.5em;
+    margin: .83em 0 .83em 0;
+    font-weight: bold; }
+  .reveal .cleantags h3 {
+    display: block;
+    font-size: 1.17em;
+    margin: 1em 0 1em 0;
+    font-weight: bold; }
+  .reveal .cleantags h4 {
+    display: block;
+    margin: 1.33em 0 1.33em 0;
+    font-weight: bold;
+    font-size: 1em; }
+  .reveal .cleantags h5 {
+    display: block;
+    font-size: .83em;
+    margin: 1.67em 0 1.67em 0;
+    font-weight: bold; }
+  .reveal .cleantags h6 {
+    display: block;
+    font-size: .67em;
+    margin: 2.33em 0 2.33em 0;
+    font-weight: bold; }
+  .reveal .cleantags table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray; }
+  .reveal .cleantags thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit; }
+  .reveal .cleantags tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit; }
+  .reveal .cleantags tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit; }
+  .reveal .cleantags table > tr {
+    vertical-align: middle; }
+  .reveal .cleantags col {
+    display: table-column; }
+  .reveal .cleantags colgroup {
+    display: table-column-group; }
+  .reveal .cleantags tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit; }
+  .reveal .cleantags td, .reveal .cleantags th {
+    display: table-cell;
+    vertical-align: inherit; }
+  .reveal .cleantags th {
+    font-weight: bold; }
+  .reveal .cleantags caption {
+    display: table-caption;
+    text-align: -webkit-center; }
+  .reveal .cleantags ul, .reveal .cleantags menu, .reveal .cleantags dir {
+    display: block;
+    list-style-type: disc;
+    margin: 1em 0 1em 0;
+    -webkit-padding-start: 40px; }
+  .reveal .cleantags ol {
+    display: block;
+    list-style-type: decimal;
+    margin: 1em 0 1em 0;
+    -webkit-padding-start: 40px; }
+  .reveal .cleantags li {
+    display: list-item; }
+  .reveal .cleantags ul ul, .reveal .cleantags ol ul {
+    list-style-type: circle; }
+  .reveal .cleantags ol ol ul, .reveal .cleantags ol ul ul, .reveal .cleantags ul ol ul, .reveal .cleantags ul ul ul {
+    list-style-type: square; }
+  .reveal .cleantags dd {
+    display: block;
+    -webkit-margin-start: 40px; }
+  .reveal .cleantags dl {
+    display: block;
+    margin: 1em 0 1em 0; }
+  .reveal .cleantags dt {
+    display: block; }
+  .reveal .cleantags ol ul, .reveal .cleantags ul ol, .reveal .cleantags ul ul, .reveal .cleantags ol ol {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .reveal .cleantags form {
+    display: block;
+    margin-top: 0em; }
+  .reveal .cleantags label {
+    cursor: default; }
+  .reveal .cleantags legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none; }
+  .reveal .cleantags fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 0.35em 0.75em 0.625em;
+    border: 2px groove ThreeDFace; }
+  .reveal .cleantags button {
+    -webkit-appearance: button; }
+  .reveal .cleantags input, .reveal .cleantags textarea, .reveal .cleantags keygen, .reveal .cleantags select, .reveal .cleantags button, .reveal .cleantags isindex, .reveal .cleantags datagrid {
+    margin: 0em;
+    font: -webkit-small-control;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: -webkit-auto; }
+  .reveal .cleantags input[type="hidden"] {
+    display: none; }
+  .reveal .cleantags input, .reveal .cleantags input[type="password"], .reveal .cleantags input[type="search"], .reveal .cleantags isindex {
+    -webkit-appearance: textfield;
+    padding: 1px;
+    background-color: white;
+    border: 2px inset;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto; }
+  .reveal .cleantags input[type="search"] {
+    -webkit-appearance: searchfield;
+    -webkit-box-sizing: border-box; }
+  .reveal .cleantags input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+    display: inline-block; }
+  .reveal .cleantags input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: searchfield-decoration;
+    display: inline-block; }
+  .reveal .cleantags input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: searchfield-results-decoration;
+    display: inline-block; }
+  .reveal .cleantags input[type="search"]::-webkit-search-results-button {
+    -webkit-appearance: searchfield-results-button;
+    display: inline-block; }
+  .reveal .cleantags input::-webkit-input-list-button {
+    -webkit-appearance: list-button;
+    display: inline-block; }
+  .reveal .cleantags input::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button;
+    display: inline-block;
+    -webkit-user-select: none; }
+  .reveal .cleantags input::-webkit-outer-spin-button {
+    -webkit-appearance: outer-spin-button;
+    display: inline-block;
+    margin-left: 2px;
+    -webkit-user-select: none; }
+  .reveal .cleantags textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    border: 1px solid;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    -webkit-box-orient: vertical;
+    resize: auto;
+    cursor: auto;
+    padding: 2px;
+    white-space: pre-wrap;
+    word-wrap: break-word; }
+  .reveal .cleantags input::-webkit-input-placeholder, .reveal .cleantags isindex::-webkit-input-placeholder, .reveal .cleantags textarea::-webkit-input-placeholder {
+    color: darkGray; }
+  .reveal .cleantags input[type="password"] {
+    -webkit-text-security: disc !important; }
+  .reveal .cleantags input[type="hidden"], .reveal .cleantags input[type="image"], .reveal .cleantags input[type="file"] {
+    -webkit-appearance: initial;
+    padding: initial;
+    background-color: initial;
+    border: initial; }
+  .reveal .cleantags input[type="file"] {
+    -webkit-box-align: baseline;
+    text-align: start !important; }
+  .reveal .cleantags input:-webkit-autofill {
+    background-color: #FAFFBD !important;
+    background-image: none !important; }
+  .reveal .cleantags input[type="radio"], .reveal .cleantags input[type="checkbox"] {
+    margin: 3px 0.5ex;
+    padding: initial;
+    background-color: initial;
+    border: initial; }
+  .reveal .cleantags input[type="button"], .reveal .cleantags input[type="submit"], .reveal .cleantags input[type="reset"], .reveal .cleantags input[type="file"]::-webkit-file-upload-button {
+    -webkit-appearance: push-button;
+    white-space: pre; }
+  .reveal .cleantags input[type="button"], .reveal .cleantags input[type="submit"], .reveal .cleantags input[type="reset"], .reveal .cleantags input[type="file"]::-webkit-file-upload-button, .reveal .cleantags button {
+    -webkit-box-align: center;
+    text-align: center;
+    cursor: default;
+    color: ButtonText;
+    padding: 2px 6px 3px 6px;
+    border: 2px outset ButtonFace;
+    background-color: ButtonFace;
+    -webkit-box-sizing: border-box; }
+  .reveal .cleantags input[type="range"] {
+    -webkit-appearance: slider-horizontal;
+    padding: initial;
+    border: initial;
+    margin: 2px; }
+  .reveal .cleantags input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: sliderthumb-horizontal; }
+  .reveal .cleantags input[type="button"]:disabled, .reveal .cleantags input[type="submit"]:disabled, .reveal .cleantags input[type="reset"]:disabled,
+  .reveal .cleantags input[type="file"]:disabled::-webkit-file-upload-button, .reveal .cleantags button:disabled,
+  .reveal .cleantags select:disabled, .reveal .cleantags keygen:disabled, .reveal .cleantags optgroup:disabled, .reveal .cleantags option:disabled {
+    color: GrayText; }
+  .reveal .cleantags input[type="button"]:active, .reveal .cleantags input[type="submit"]:active, .reveal .cleantags input[type="reset"]:active, .reveal .cleantags input[type="file"]:active::-webkit-file-upload-button, .reveal .cleantags button:active {
+    border-style: inset; }
+  .reveal .cleantags input[type="button"]:active:disabled, .reveal .cleantags input[type="submit"]:active:disabled, .reveal .cleantags input[type="reset"]:active:disabled, .reveal .cleantags input[type="file"]:active:disabled::-webkit-file-upload-button, .reveal .cleantags button:active:disabled {
+    border-style: outset; }
+  .reveal .cleantags area, .reveal .cleantags param {
+    display: none; }
+  .reveal .cleantags input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -webkit-box-sizing: border-box; }
+  .reveal .cleantags input[type="radio"] {
+    -webkit-appearance: radio;
+    -webkit-box-sizing: border-box; }
+  .reveal .cleantags keygen, .reveal .cleantags select {
+    -webkit-appearance: menulist;
+    -webkit-box-sizing: border-box;
+    -webkit-box-align: center;
+    border: 1px solid;
+    -webkit-border-radius: 5px;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default; }
+  .reveal .cleantags select[size],
+  .reveal .cleantags select[multiple],
+  .reveal .cleantags select[size][multiple] {
+    -webkit-appearance: listbox;
+    -webkit-box-align: start;
+    border: 1px inset gray;
+    -webkit-border-radius: initial;
+    white-space: initial; }
+  .reveal .cleantags select[size="0"],
+  .reveal .cleantags select[size="1"] {
+    -webkit-appearance: menulist;
+    -webkit-box-align: center;
+    border: 1px solid;
+    -webkit-border-radius: 5px;
+    white-space: pre; }
+  .reveal .cleantags datalist {
+    display: none; }
+  .reveal .cleantags optgroup {
+    font-weight: bolder; }
+  .reveal .cleantags option {
+    font-weight: normal; }
+  .reveal .cleantags progress {
+    -webkit-appearance: progress-bar;
+    display: inline-block;
+    height: 1em;
+    width: 10em;
+    vertical-align: -0.2em; }
+  .reveal .cleantags progress::-webkit-progress-bar {
+    -webkit-appearance: progress-bar; }
+  .reveal .cleantags u, .reveal .cleantags ins {
+    text-decoration: underline; }
+  .reveal .cleantags strong, .reveal .cleantags b {
+    font-weight: bolder; }
+  .reveal .cleantags i, .reveal .cleantags cite, .reveal .cleantags em, .reveal .cleantags var, .reveal .cleantags address {
+    font-style: italic; }
+  .reveal .cleantags tt, .reveal .cleantags code, .reveal .cleantags kbd, .reveal .cleantags samp {
+    font-family: monospace; }
+  .reveal .cleantags pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0; }
+  .reveal .cleantags big {
+    font-size: larger; }
+  .reveal .cleantags small {
+    font-size: smaller; }
+  .reveal .cleantags s, .reveal .cleantags strike, .reveal .cleantags del {
+    text-decoration: line-through; }
+  .reveal .cleantags sub {
+    vertical-align: sub;
+    font-size: smaller; }
+  .reveal .cleantags sup {
+    vertical-align: super;
+    font-size: smaller; }
+  .reveal .cleantags nobr {
+    white-space: nowrap; }
+  .reveal .cleantags :focus {
+    outline: auto 5px -webkit-focus-ring-color; }
+  .reveal .cleantags html:focus, .reveal .cleantags body:focus, .reveal .cleantags input[readonly]:focus {
+    outline: none; }
+  .reveal .cleantags input:focus, .reveal .cleantags textarea:focus, .reveal .cleantags isindex:focus, .reveal .cleantags keygen:focus, .reveal .cleantags select:focus {
+    outline-offset: -2px; }
+  .reveal .cleantags input[type="button"]:focus,
+  .reveal .cleantags input[type="checkbox"]:focus,
+  .reveal .cleantags input[type="file"]:focus,
+  .reveal .cleantags input[type="hidden"]:focus,
+  .reveal .cleantags input[type="image"]:focus,
+  .reveal .cleantags input[type="radio"]:focus,
+  .reveal .cleantags input[type="reset"]:focus,
+  .reveal .cleantags input[type="search"]:focus,
+  .reveal .cleantags input[type="submit"]:focus,
+  .reveal .cleantags input[type="file"]:focus::-webkit-file-upload-button {
+    outline-offset: 0; }
+  .reveal .cleantags a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto; }
+  .reveal .cleantags a:-webkit-any-link:active {
+    color: -webkit-activelink; }
+  .reveal .cleantags ruby, .reveal .cleantags rt {
+    text-indent: 0;
+    /* blocks used for ruby rendering should not trigger this */
+    line-height: normal; }
+  .reveal .cleantags ruby > rt {
+    display: block;
+    font-size: 60%;
+    /* make slightly larger than 50% for better readability */
+    text-align: center; }
+  .reveal .cleantags ruby > rp {
+    display: none; }
+  .reveal .cleantags noframes {
+    display: none; }
+  .reveal .cleantags frameset, .reveal .cleantags frame {
+    display: block; }
+  .reveal .cleantags frameset {
+    border-color: inherit; }
+  .reveal .cleantags iframe {
+    border: 2px inset; }
+
+@page {
+  .reveal .cleantags {
+    /* FIXME: Define the right default values for page properties. */
+    margin: 1in; } }
+  .reveal .cleantags h1, .reveal .cleantags h2, .reveal .cleantags h3, .reveal .cleantags h4, .reveal .cleantags h5, .reveal .cleantags h6, .reveal .cleantags p, .reveal .cleantags td, .reveal .cleantags dl, .reveal .cleantags tr, .reveal .cleantags dt, .reveal .cleantags ol, .reveal .cleantags form, .reveal .cleantags select, .reveal .cleantags option, .reveal .cleantags pre, .reveal .cleantags div, .reveal .cleantags table, .reveal .cleantags th, .reveal .cleantags tbody, .reveal .cleantags tfoot, .reveal .cleantags caption, .reveal .cleantags thead, .reveal .cleantags ul, .reveal .cleantags li, .reveal .cleantags address, .reveal .cleantags blockquote, .reveal .cleantags dd, .reveal .cleantags fieldset, .reveal .cleantags li, .reveal .cleantags iframe, .reveal .cleantags strong, .reveal .cleantags legend, .reveal .cleantags em, .reveal .cleantags summary, .reveal .cleantags cite, .reveal .cleantags span, .reveal .cleantags input, .reveal .cleantags sup, .reveal .cleantags label, .reveal .cleantags dfn, .reveal .cleantags object, .reveal .cleantags big, .reveal .cleantags q, .reveal .cleantags samp, .reveal .cleantags acronym, .reveal .cleantags small, .reveal .cleantags img, .reveal .cleantags strike, .reveal .cleantags code, .reveal .cleantags sub, .reveal .cleantags ins, .reveal .cleantags textarea, .reveal .cleantags button, .reveal .cleantags var, .reveal .cleantags a, .reveal .cleantags abbr, .reveal .cleantags applet, .reveal .cleantags del, .reveal .cleantags kbd, .reveal .cleantags tt, .reveal .cleantags b, .reveal .cleantags i, .reveal .cleantags hr,
+  .reveal .cleantags article, .reveal .cleantags aside, .reveal .cleantags figure, .reveal .cleantags figcaption, .reveal .cleantags footer, .reveal .cleantags header, .reveal .cleantags menu, .reveal .cleantags nav, .reveal .cleantags section, .reveal .cleantags time, .reveal .cleantags mark, .reveal .cleantags audio, .reveal .cleantags video, .reveal .cleantags abbr, .reveal .cleantags address, .reveal .cleantags area, .reveal .cleantags blockquote, .reveal .cleantags canvas, .reveal .cleantags caption, .reveal .cleantags cite, .reveal .cleantags code, .reveal .cleantags colgroup, .reveal .cleantags col, .reveal .cleantags datalist, .reveal .cleantags fieldset, .reveal .cleantags main, .reveal .cleantags map, .reveal .cleantags meta, .reveal .cleantags optgroup, .reveal .cleantags output, .reveal .cleantags progress {
+    color: #000;
+    font-family: "Times New Roman";
+    text-align: left;
+    background-color: #FFF;
+    text-shadow: none;
+    line-height: 1;
+    text-transform: initial; }
+  .reveal .cleantags li {
+    font-size: initial; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -5826,737 +6535,26 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-/*********************************************
- * GLOBAL STYLES
- *********************************************/
-body {
-  background: #1c1e20;
-  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
-  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background-color: #2b2b2b; }
-
-.reveal {
-  font-family: "Lato", sans-serif;
-  font-size: 36px;
-  font-weight: normal;
-  color: #eee; }
-
-::selection {
-  color: #fff;
-  background: #FF5E99;
-  text-shadow: none; }
-
-.reveal .slides > section,
-.reveal .slides > section > section {
-  line-height: 1.3;
-  font-weight: inherit; }
-
-/*********************************************
- * HEADERS
- *********************************************/
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
-  margin: 0 0 20px 0;
-  color: #eee;
-  font-family: "League Gothic", Impact, sans-serif;
-  font-weight: normal;
-  line-height: 1.2;
-  letter-spacing: normal;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-  word-wrap: break-word; }
-
-.reveal h1 {
-  font-size: 3.77em; }
-
-.reveal h2 {
-  font-size: 2.11em; }
-
-.reveal h3 {
-  font-size: 1.55em; }
-
-.reveal h4 {
-  font-size: 1em; }
-
-.reveal h1 {
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); }
-
-/*********************************************
- * OTHER
- *********************************************/
-.reveal p {
-  margin: 20px 0;
-  line-height: 1.3; }
-
-/* Ensure certain elements are never larger than the slide itself */
-.reveal img,
-.reveal video,
-.reveal iframe {
-  max-width: 95%;
-  max-height: 95%; }
-
-.reveal strong,
-.reveal b {
-  font-weight: bold; }
-
-.reveal em {
-  font-style: italic; }
-
-.reveal ol,
-.reveal dl,
-.reveal ul {
-  display: inline-block;
-  text-align: left;
-  margin: 0 0 0 1em; }
-
-.reveal ol {
-  list-style-type: decimal; }
-
-.reveal ul {
-  list-style-type: disc; }
-
-.reveal ul ul {
-  list-style-type: square; }
-
-.reveal ul ul ul {
-  list-style-type: circle; }
-
-.reveal ul ul,
-.reveal ul ol,
-.reveal ol ol,
-.reveal ol ul {
-  display: block;
-  margin-left: 40px; }
-
-.reveal dt {
-  font-weight: bold; }
-
-.reveal dd {
-  margin-left: 40px; }
-
-.reveal q,
-.reveal blockquote {
-  quotes: none; }
-
-.reveal blockquote {
-  display: block;
-  position: relative;
-  width: 70%;
-  margin: 20px auto;
-  padding: 5px;
-  font-style: italic;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
-
-.reveal blockquote p:first-child,
-.reveal blockquote p:last-child {
-  display: inline-block; }
-
-.reveal q {
-  font-style: italic; }
-
-.reveal pre {
-  display: block;
-  position: relative;
-  width: 90%;
-  margin: 20px auto;
-  text-align: left;
-  font-size: 0.55em;
-  font-family: monospace;
-  line-height: 1.2em;
-  word-wrap: break-word;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
-
-.reveal code {
-  font-family: monospace; }
-
-.reveal pre code {
-  display: block;
-  padding: 5px;
-  overflow: auto;
-  word-wrap: normal; }
-
-.reveal table {
-  margin: auto;
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-.reveal table th {
-  font-weight: bold; }
-
-.reveal table th,
-.reveal table td {
-  text-align: left;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  border-bottom: 1px solid; }
-
-.reveal table th[align="center"],
-.reveal table td[align="center"] {
-  text-align: center; }
-
-.reveal table th[align="right"],
-.reveal table td[align="right"] {
-  text-align: right; }
-
-.reveal table tr:last-child td {
-  border-bottom: none; }
-
-.reveal sup {
-  vertical-align: super; }
-
-.reveal sub {
-  vertical-align: sub; }
-
-.reveal small {
-  display: inline-block;
-  font-size: 0.6em;
-  line-height: 1.2em;
-  vertical-align: top; }
-
-.reveal small * {
-  vertical-align: top; }
-
-/*********************************************
- * LINKS
- *********************************************/
-.reveal a {
-  color: #13DAEC;
-  text-decoration: none;
-  -webkit-transition: color .15s ease;
-  -moz-transition: color .15s ease;
-  transition: color .15s ease; }
-
-.reveal a:hover {
-  color: #71e9f4;
-  text-shadow: none;
-  border: none; }
-
-.reveal .roll span:after {
-  color: #fff;
-  background: #0d99a5; }
-
-/*********************************************
- * IMAGES
- *********************************************/
-.reveal section img {
-  margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #eee;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
-
-.reveal section img.plain {
-  border: 0;
-  box-shadow: none; }
-
-.reveal a img {
-  -webkit-transition: all .15s linear;
-  -moz-transition: all .15s linear;
-  transition: all .15s linear; }
-
-.reveal a:hover img {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: #13DAEC;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
-
-/*********************************************
- * NAVIGATION CONTROLS
- *********************************************/
-.reveal .controls .navigate-left,
-.reveal .controls .navigate-left.enabled {
-  border-right-color: #13DAEC; }
-
-.reveal .controls .navigate-right,
-.reveal .controls .navigate-right.enabled {
-  border-left-color: #13DAEC; }
-
-.reveal .controls .navigate-up,
-.reveal .controls .navigate-up.enabled {
-  border-bottom-color: #13DAEC; }
-
-.reveal .controls .navigate-down,
-.reveal .controls .navigate-down.enabled {
-  border-top-color: #13DAEC; }
-
-.reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #71e9f4; }
-
-.reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #71e9f4; }
-
-.reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #71e9f4; }
-
-.reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #71e9f4; }
-
-/*********************************************
- * PROGRESS BAR
- *********************************************/
-.reveal .progress {
-  background: rgba(0, 0, 0, 0.2); }
-
-.reveal .progress span {
-  background: #13DAEC;
-  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
-
-/*********************************************
- * SLIDE NUMBER
- *********************************************/
-.reveal .slide-number {
-  color: #13DAEC; }
-
-.reveal .cleantags {
-  /* children of the <head> element all have display:none */
-  /* generic block-level elements */
-  /* heading elements */
-  /* tables */
-  /* for tables without table section elements (can happen with XHTML or dynamically created tables) */
-  /* lists */
-  /* form elements */
-  /* progress */
-  /* inline elements */
-  /* states */
-  /* Read-only text fields do not show a focus ring but do still receive focus */
-  /* HTML5 ruby elements */
-  /* other elements */
-  /* page */
-  /* noscript is handled internally, as it depends on settings */
-  /* HTML 4.01 */ }
-  .reveal .cleantags html {
-    display: block; }
-  .reveal .cleantags head {
-    display: none; }
-  .reveal .cleantags meta {
-    display: none; }
-  .reveal .cleantags title {
-    display: none; }
-  .reveal .cleantags link {
-    display: none; }
-  .reveal .cleantags style {
-    display: none; }
-  .reveal .cleantags script {
-    display: none; }
-  .reveal .cleantags body {
-    display: block;
-    margin: 8px; }
-  .reveal .cleantags p {
-    display: block;
-    margin: 1.0em 0px; }
-  .reveal .cleantags div {
-    display: block; }
-  .reveal .cleantags layer {
-    display: block; }
-  .reveal .cleantags article, .reveal .cleantags aside, .reveal .cleantags footer, .reveal .cleantags header, .reveal .cleantags hgroup, .reveal .cleantags nav, .reveal .cleantags section {
-    display: block; }
-  .reveal .cleantags marquee {
-    display: inline-block;
-    overflow: -webkit-marquee; }
-  .reveal .cleantags address {
-    display: block; }
-  .reveal .cleantags blockquote {
-    display: block;
-    margin: 1em 40px 1em 40px; }
-  .reveal .cleantags q {
-    display: inline; }
-  .reveal .cleantags q:before {
-    content: '"'; }
-  .reveal .cleantags q:after {
-    content: '"'; }
-  .reveal .cleantags center {
-    display: block;
-    /* special centering to be able to emulate the html4/netscape behaviour */
-    text-align: -webkit-center; }
-  .reveal .cleantags hr {
-    display: block;
-    margin: 0.5em auto;
-    border-style: inset;
-    border-width: 1px; }
-  .reveal .cleantags map {
-    display: inline; }
-  .reveal .cleantags h1 {
-    display: block;
-    font-size: 2em;
-    margin: .67em 0 .67em 0;
-    font-weight: bold; }
-  .reveal .cleantags h2 {
-    display: block;
-    font-size: 1.5em;
-    margin: .83em 0 .83em 0;
-    font-weight: bold; }
-  .reveal .cleantags h3 {
-    display: block;
-    font-size: 1.17em;
-    margin: 1em 0 1em 0;
-    font-weight: bold; }
-  .reveal .cleantags h4 {
-    display: block;
-    margin: 1.33em 0 1.33em 0;
-    font-weight: bold;
-    font-size: 1em; }
-  .reveal .cleantags h5 {
-    display: block;
-    font-size: .83em;
-    margin: 1.67em 0 1.67em 0;
-    font-weight: bold; }
-  .reveal .cleantags h6 {
-    display: block;
-    font-size: .67em;
-    margin: 2.33em 0 2.33em 0;
-    font-weight: bold; }
-  .reveal .cleantags table {
-    display: table;
-    border-collapse: separate;
-    border-spacing: 2px;
-    border-color: gray; }
-  .reveal .cleantags thead {
-    display: table-header-group;
-    vertical-align: middle;
-    border-color: inherit; }
-  .reveal .cleantags tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit; }
-  .reveal .cleantags tfoot {
-    display: table-footer-group;
-    vertical-align: middle;
-    border-color: inherit; }
-  .reveal .cleantags table > tr {
-    vertical-align: middle; }
-  .reveal .cleantags col {
-    display: table-column; }
-  .reveal .cleantags colgroup {
-    display: table-column-group; }
-  .reveal .cleantags tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit; }
-  .reveal .cleantags td, .reveal .cleantags th {
-    display: table-cell;
-    vertical-align: inherit; }
-  .reveal .cleantags th {
-    font-weight: bold; }
-  .reveal .cleantags caption {
-    display: table-caption;
-    text-align: -webkit-center; }
-  .reveal .cleantags ul, .reveal .cleantags menu, .reveal .cleantags dir {
-    display: block;
-    list-style-type: disc;
-    margin: 1em 0 1em 0;
-    -webkit-padding-start: 40px; }
-  .reveal .cleantags ol {
-    display: block;
-    list-style-type: decimal;
-    margin: 1em 0 1em 0;
-    -webkit-padding-start: 40px; }
-  .reveal .cleantags li {
-    display: list-item; }
-  .reveal .cleantags ul ul, .reveal .cleantags ol ul {
-    list-style-type: circle; }
-  .reveal .cleantags ol ol ul, .reveal .cleantags ol ul ul, .reveal .cleantags ul ol ul, .reveal .cleantags ul ul ul {
-    list-style-type: square; }
-  .reveal .cleantags dd {
-    display: block;
-    -webkit-margin-start: 40px; }
-  .reveal .cleantags dl {
-    display: block;
-    margin: 1em 0 1em 0; }
-  .reveal .cleantags dt {
-    display: block; }
-  .reveal .cleantags ol ul, .reveal .cleantags ul ol, .reveal .cleantags ul ul, .reveal .cleantags ol ol {
-    margin-top: 0;
-    margin-bottom: 0; }
-  .reveal .cleantags form {
-    display: block;
-    margin-top: 0em; }
-  .reveal .cleantags label {
-    cursor: default; }
-  .reveal .cleantags legend {
-    display: block;
-    padding-left: 2px;
-    padding-right: 2px;
-    border: none; }
-  .reveal .cleantags fieldset {
-    display: block;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding: 0.35em 0.75em 0.625em;
-    border: 2px groove ThreeDFace; }
-  .reveal .cleantags button {
-    -webkit-appearance: button; }
-  .reveal .cleantags input, .reveal .cleantags textarea, .reveal .cleantags keygen, .reveal .cleantags select, .reveal .cleantags button, .reveal .cleantags isindex, .reveal .cleantags datagrid {
-    margin: 0em;
-    font: -webkit-small-control;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0;
-    text-shadow: none;
-    display: inline-block;
-    text-align: -webkit-auto; }
-  .reveal .cleantags input[type="hidden"] {
-    display: none; }
-  .reveal .cleantags input, .reveal .cleantags input[type="password"], .reveal .cleantags input[type="search"], .reveal .cleantags isindex {
-    -webkit-appearance: textfield;
-    padding: 1px;
-    background-color: white;
-    border: 2px inset;
-    -webkit-rtl-ordering: logical;
-    -webkit-user-select: text;
-    cursor: auto; }
-  .reveal .cleantags input[type="search"] {
-    -webkit-appearance: searchfield;
-    -webkit-box-sizing: border-box; }
-  .reveal .cleantags input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: searchfield-cancel-button;
-    display: inline-block; }
-  .reveal .cleantags input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: searchfield-decoration;
-    display: inline-block; }
-  .reveal .cleantags input[type="search"]::-webkit-search-results-decoration {
-    -webkit-appearance: searchfield-results-decoration;
-    display: inline-block; }
-  .reveal .cleantags input[type="search"]::-webkit-search-results-button {
-    -webkit-appearance: searchfield-results-button;
-    display: inline-block; }
-  .reveal .cleantags input::-webkit-input-list-button {
-    -webkit-appearance: list-button;
-    display: inline-block; }
-  .reveal .cleantags input::-webkit-inner-spin-button {
-    -webkit-appearance: inner-spin-button;
-    display: inline-block;
-    -webkit-user-select: none; }
-  .reveal .cleantags input::-webkit-outer-spin-button {
-    -webkit-appearance: outer-spin-button;
-    display: inline-block;
-    margin-left: 2px;
-    -webkit-user-select: none; }
-  .reveal .cleantags textarea {
-    -webkit-appearance: textarea;
-    background-color: white;
-    border: 1px solid;
-    -webkit-rtl-ordering: logical;
-    -webkit-user-select: text;
-    -webkit-box-orient: vertical;
-    resize: auto;
-    cursor: auto;
-    padding: 2px;
-    white-space: pre-wrap;
-    word-wrap: break-word; }
-  .reveal .cleantags input::-webkit-input-placeholder, .reveal .cleantags isindex::-webkit-input-placeholder, .reveal .cleantags textarea::-webkit-input-placeholder {
-    color: darkGray; }
-  .reveal .cleantags input[type="password"] {
-    -webkit-text-security: disc !important; }
-  .reveal .cleantags input[type="hidden"], .reveal .cleantags input[type="image"], .reveal .cleantags input[type="file"] {
-    -webkit-appearance: initial;
-    padding: initial;
-    background-color: initial;
-    border: initial; }
-  .reveal .cleantags input[type="file"] {
-    -webkit-box-align: baseline;
-    text-align: start !important; }
-  .reveal .cleantags input:-webkit-autofill {
-    background-color: #FAFFBD !important;
-    background-image: none !important; }
-  .reveal .cleantags input[type="radio"], .reveal .cleantags input[type="checkbox"] {
-    margin: 3px 0.5ex;
-    padding: initial;
-    background-color: initial;
-    border: initial; }
-  .reveal .cleantags input[type="button"], .reveal .cleantags input[type="submit"], .reveal .cleantags input[type="reset"], .reveal .cleantags input[type="file"]::-webkit-file-upload-button {
-    -webkit-appearance: push-button;
-    white-space: pre; }
-  .reveal .cleantags input[type="button"], .reveal .cleantags input[type="submit"], .reveal .cleantags input[type="reset"], .reveal .cleantags input[type="file"]::-webkit-file-upload-button, .reveal .cleantags button {
-    -webkit-box-align: center;
-    text-align: center;
-    cursor: default;
-    color: ButtonText;
-    padding: 2px 6px 3px 6px;
-    border: 2px outset ButtonFace;
-    background-color: ButtonFace;
-    -webkit-box-sizing: border-box; }
-  .reveal .cleantags input[type="range"] {
-    -webkit-appearance: slider-horizontal;
-    padding: initial;
-    border: initial;
-    margin: 2px; }
-  .reveal .cleantags input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: sliderthumb-horizontal; }
-  .reveal .cleantags input[type="button"]:disabled, .reveal .cleantags input[type="submit"]:disabled, .reveal .cleantags input[type="reset"]:disabled,
-  .reveal .cleantags input[type="file"]:disabled::-webkit-file-upload-button, .reveal .cleantags button:disabled,
-  .reveal .cleantags select:disabled, .reveal .cleantags keygen:disabled, .reveal .cleantags optgroup:disabled, .reveal .cleantags option:disabled {
-    color: GrayText; }
-  .reveal .cleantags input[type="button"]:active, .reveal .cleantags input[type="submit"]:active, .reveal .cleantags input[type="reset"]:active, .reveal .cleantags input[type="file"]:active::-webkit-file-upload-button, .reveal .cleantags button:active {
-    border-style: inset; }
-  .reveal .cleantags input[type="button"]:active:disabled, .reveal .cleantags input[type="submit"]:active:disabled, .reveal .cleantags input[type="reset"]:active:disabled, .reveal .cleantags input[type="file"]:active:disabled::-webkit-file-upload-button, .reveal .cleantags button:active:disabled {
-    border-style: outset; }
-  .reveal .cleantags area, .reveal .cleantags param {
-    display: none; }
-  .reveal .cleantags input[type="checkbox"] {
-    -webkit-appearance: checkbox;
-    -webkit-box-sizing: border-box; }
-  .reveal .cleantags input[type="radio"] {
-    -webkit-appearance: radio;
-    -webkit-box-sizing: border-box; }
-  .reveal .cleantags keygen, .reveal .cleantags select {
-    -webkit-appearance: menulist;
-    -webkit-box-sizing: border-box;
-    -webkit-box-align: center;
-    border: 1px solid;
-    -webkit-border-radius: 5px;
-    white-space: pre;
-    -webkit-rtl-ordering: logical;
-    color: black;
-    background-color: white;
-    cursor: default; }
-  .reveal .cleantags select[size],
-  .reveal .cleantags select[multiple],
-  .reveal .cleantags select[size][multiple] {
-    -webkit-appearance: listbox;
-    -webkit-box-align: start;
-    border: 1px inset gray;
-    -webkit-border-radius: initial;
-    white-space: initial; }
-  .reveal .cleantags select[size="0"],
-  .reveal .cleantags select[size="1"] {
-    -webkit-appearance: menulist;
-    -webkit-box-align: center;
-    border: 1px solid;
-    -webkit-border-radius: 5px;
-    white-space: pre; }
-  .reveal .cleantags datalist {
-    display: none; }
-  .reveal .cleantags optgroup {
-    font-weight: bolder; }
-  .reveal .cleantags option {
-    font-weight: normal; }
-  .reveal .cleantags progress {
-    -webkit-appearance: progress-bar;
-    display: inline-block;
-    height: 1em;
-    width: 10em;
-    vertical-align: -0.2em; }
-  .reveal .cleantags progress::-webkit-progress-bar {
-    -webkit-appearance: progress-bar; }
-  .reveal .cleantags u, .reveal .cleantags ins {
-    text-decoration: underline; }
-  .reveal .cleantags strong, .reveal .cleantags b {
-    font-weight: bolder; }
-  .reveal .cleantags i, .reveal .cleantags cite, .reveal .cleantags em, .reveal .cleantags var, .reveal .cleantags address {
-    font-style: italic; }
-  .reveal .cleantags tt, .reveal .cleantags code, .reveal .cleantags kbd, .reveal .cleantags samp {
-    font-family: monospace; }
-  .reveal .cleantags pre {
-    display: block;
-    font-family: monospace;
-    white-space: pre;
-    margin: 1em 0; }
-  .reveal .cleantags big {
-    font-size: larger; }
-  .reveal .cleantags small {
-    font-size: smaller; }
-  .reveal .cleantags s, .reveal .cleantags strike, .reveal .cleantags del {
-    text-decoration: line-through; }
-  .reveal .cleantags sub {
-    vertical-align: sub;
-    font-size: smaller; }
-  .reveal .cleantags sup {
-    vertical-align: super;
-    font-size: smaller; }
-  .reveal .cleantags nobr {
-    white-space: nowrap; }
-  .reveal .cleantags :focus {
-    outline: auto 5px -webkit-focus-ring-color; }
-  .reveal .cleantags html:focus, .reveal .cleantags body:focus, .reveal .cleantags input[readonly]:focus {
-    outline: none; }
-  .reveal .cleantags input:focus, .reveal .cleantags textarea:focus, .reveal .cleantags isindex:focus, .reveal .cleantags keygen:focus, .reveal .cleantags select:focus {
-    outline-offset: -2px; }
-  .reveal .cleantags input[type="button"]:focus,
-  .reveal .cleantags input[type="checkbox"]:focus,
-  .reveal .cleantags input[type="file"]:focus,
-  .reveal .cleantags input[type="hidden"]:focus,
-  .reveal .cleantags input[type="image"]:focus,
-  .reveal .cleantags input[type="radio"]:focus,
-  .reveal .cleantags input[type="reset"]:focus,
-  .reveal .cleantags input[type="search"]:focus,
-  .reveal .cleantags input[type="submit"]:focus,
-  .reveal .cleantags input[type="file"]:focus::-webkit-file-upload-button {
-    outline-offset: 0; }
-  .reveal .cleantags a:-webkit-any-link {
-    color: -webkit-link;
-    text-decoration: underline;
-    cursor: auto; }
-  .reveal .cleantags a:-webkit-any-link:active {
-    color: -webkit-activelink; }
-  .reveal .cleantags ruby, .reveal .cleantags rt {
-    text-indent: 0;
-    /* blocks used for ruby rendering should not trigger this */
-    line-height: normal; }
-  .reveal .cleantags ruby > rt {
-    display: block;
-    font-size: 60%;
-    /* make slightly larger than 50% for better readability */
-    text-align: center; }
-  .reveal .cleantags ruby > rp {
-    display: none; }
-  .reveal .cleantags noframes {
-    display: none; }
-  .reveal .cleantags frameset, .reveal .cleantags frame {
-    display: block; }
-  .reveal .cleantags frameset {
-    border-color: inherit; }
-  .reveal .cleantags iframe {
-    border: 2px inset; }
-
-@page {
-  .reveal .cleantags {
-    /* FIXME: Define the right default values for page properties. */
-    margin: 1in; } }
-  .reveal .cleantags h1, .reveal .cleantags h2, .reveal .cleantags h3, .reveal .cleantags h4, .reveal .cleantags h5, .reveal .cleantags h6, .reveal .cleantags p, .reveal .cleantags td, .reveal .cleantags dl, .reveal .cleantags tr, .reveal .cleantags dt, .reveal .cleantags ol, .reveal .cleantags form, .reveal .cleantags select, .reveal .cleantags option, .reveal .cleantags pre, .reveal .cleantags div, .reveal .cleantags table, .reveal .cleantags th, .reveal .cleantags tbody, .reveal .cleantags tfoot, .reveal .cleantags caption, .reveal .cleantags thead, .reveal .cleantags ul, .reveal .cleantags li, .reveal .cleantags address, .reveal .cleantags blockquote, .reveal .cleantags dd, .reveal .cleantags fieldset, .reveal .cleantags li, .reveal .cleantags iframe, .reveal .cleantags strong, .reveal .cleantags legend, .reveal .cleantags em, .reveal .cleantags summary, .reveal .cleantags cite, .reveal .cleantags span, .reveal .cleantags input, .reveal .cleantags sup, .reveal .cleantags label, .reveal .cleantags dfn, .reveal .cleantags object, .reveal .cleantags big, .reveal .cleantags q, .reveal .cleantags samp, .reveal .cleantags acronym, .reveal .cleantags small, .reveal .cleantags img, .reveal .cleantags strike, .reveal .cleantags code, .reveal .cleantags sub, .reveal .cleantags ins, .reveal .cleantags textarea, .reveal .cleantags button, .reveal .cleantags var, .reveal .cleantags a, .reveal .cleantags abbr, .reveal .cleantags applet, .reveal .cleantags del, .reveal .cleantags kbd, .reveal .cleantags tt, .reveal .cleantags b, .reveal .cleantags i, .reveal .cleantags hr,
-  .reveal .cleantags article, .reveal .cleantags aside, .reveal .cleantags figure, .reveal .cleantags figcaption, .reveal .cleantags footer, .reveal .cleantags header, .reveal .cleantags menu, .reveal .cleantags nav, .reveal .cleantags section, .reveal .cleantags time, .reveal .cleantags mark, .reveal .cleantags audio, .reveal .cleantags video, .reveal .cleantags abbr, .reveal .cleantags address, .reveal .cleantags area, .reveal .cleantags blockquote, .reveal .cleantags canvas, .reveal .cleantags caption, .reveal .cleantags cite, .reveal .cleantags code, .reveal .cleantags colgroup, .reveal .cleantags col, .reveal .cleantags datalist, .reveal .cleantags fieldset, .reveal .cleantags main, .reveal .cleantags map, .reveal .cleantags meta, .reveal .cleantags optgroup, .reveal .cleantags output, .reveal .cleantags progress {
-    color: #000;
-    font-family: "Times New Roman";
-    text-align: left;
-    background-color: #FFF;
-    text-shadow: none;
-    line-height: 1;
-    text-transform: initial; }
-  .reveal .cleantags li {
-    font-size: initial; }
-
 .reveal strong {
   color: #f68220; }
 
-input[type=text] {
-  color: black; }
-
-li {
-  padding-bottom: 20px; }
-  li.muted {
-    opacity: 0.5; }
-
-.reveal .speaker-notes {
-  max-height: 45%;
-  line-height: 1;
-  background-color: black;
-  opacity: 0.3; }
-  .reveal .speaker-notes p {
-    margin: 4px;
-    font-size: 16px; }
+.reveal .input-group-btn {
+  vertical-align: top; }
 
 .reveal li {
-  font-size: 34px; }
+  font-size: 34px;
+  padding-bottom: 20px; }
+  .reveal li.muted {
+    opacity: 0.5; }
+  .reveal li code {
+    color: #f68220; }
+    .reveal li code.cleantags {
+      background: white;
+      font-size: 0.5em;
+      color: #000;
+      text-align: left;
+      font-family: "Times New Roman" !important;
+      padding: 0; }
 
 .reveal h4 {
   margin: 0;
@@ -6566,17 +6564,6 @@ li {
 .reveal pre {
   margin: 0 0 32px 0;
   width: 100%; }
-
-.reveal li code {
-  color: #f68220; }
-
-.reveal code.cleantags {
-  background: white;
-  font-size: 0.5em;
-  color: #000;
-  text-align: left;
-  font-family: "Times New Roman" !important;
-  padding: 0; }
 
 .reveal section img.browsers, .reveal section img.wide {
   border: none;
@@ -6588,6 +6575,15 @@ li {
   background: none;
   box-shadow: none;
   width: 128px; }
+
+.reveal .speaker-notes {
+  max-height: 45%;
+  line-height: 1;
+  background-color: black;
+  opacity: 0.3; }
+  .reveal .speaker-notes p {
+    margin: 4px;
+    font-size: 16px; }
 
 nav {
   position: absolute;

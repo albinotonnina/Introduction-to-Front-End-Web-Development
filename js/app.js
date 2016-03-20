@@ -69,6 +69,8 @@ var initReveal = function () {
         maxScale: 1.5
     });
 
+
+
 };
 
 
@@ -118,4 +120,3 @@ function init(jsonfile) {
 
     });
 }
-

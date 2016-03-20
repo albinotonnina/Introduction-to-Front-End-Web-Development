@@ -1,5 +1,10 @@
 [
   "level2/introduction",
+  "level2/syntax",
+  "level2/selectors",
+  "level2/common_properties",
   "level2/box-model",
-  "level2/selectors"
+  "level2/common_properties_2",
+  "level2/cascade",
+  "level2/specificity"
 ]
