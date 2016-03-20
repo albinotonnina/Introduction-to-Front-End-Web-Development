@@ -1,59 +1,325 @@
-
 <section>
-    <h2>CSS selectors specificity</h2>
-    <div style="height: 600px;">
-        <p data-height="600" data-theme-id="22750" data-slug-hash="GZjyZx" data-default-tab="html" data-user="albino"
-           class="codepen">See the Pen <a href="http://codepen.io/albino/pen/GZjyZx/">Css specificity</a> by Albino
-            Tonnina (<a href="http://codepen.io/albino">@albino</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-    </div>
-</section>
+    <h2>CSS Selectors</h2>
 
-
-<section>
-    <h2>CSS selectors specificity calculator</h2>
-
-    <input id="specificity-input" type="text" value="ul#nav li.active a"/>
-
-    <button class="btn btn-primary" id="get-specificity">get specificity</button>
-
-    <div style="margin-top:32px;height:400px;overflow: scroll;">
-        <table id="specificity-results"></table>
-    </div>
-    <button class="btn btn-default" id="reset-specificity-results" style="display:none;">reset result</button>
-    <script>
-
-        var userSearches = [];
-
-        $('#reset-specificity-results').on('click', function () {
-            $('#specificity-results').html('');
-            userSearches = [];
-        });
-
-        $('#get-specificity').on('click', function () {
-
-            var userInput = $('#specificity-input').val();
-            var specObj = SPECIFICITY.calculate(userInput);
-
-            if (specObj && userSearches.indexOf(specObj[0].selector) === -1) {
-                $('#reset-specificity-results').show();
-                userSearches.push(specObj[0].selector);
-                $('#specificity-results').append('<tr><td>' + specObj[0].selector + '</td><td>' + specObj[0].specificity + '</td></tr>');
-            }
-
-
-        });
-
-
-    </script>
+    <p>CSS selectors are used to "find" (or select) HTML elements based on their element name, id, class, attribute, and more.</p>
 </section>
 
 <section>
-    <h2>Simple page layout</h2>
-    <div style="height:700px">
-        <p data-height="700" data-theme-id="0" data-slug-hash="grwYEM" data-default-tab="result" data-user="albino"
-           class="codepen">See the Pen <a href="http://codepen.io/albino/pen/grwYEM/">Layout</a> by Albino Tonnina (<a
-                href="http://codepen.io/albino">@albino</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    <h2>Element based selectors</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    <div>
+        <span>CONTENT</span>
     </div>
+
+    <div>
+        <span>OTHER CONTENT</span>
+    </div>
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    div {
+        width: 100px;
+    }
+
+    span {
+        color: Blue;
+    }
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+        </div>
+    </div>
+
+    <p>selects elements based on the element name</p>
+</section>
+
+<section>
+    <h2>Id based selectors</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    <div id="main">
+        CONTENT
+    </div>
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    #main {
+        width: 100px;
+    }
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+        </div>
+    </div>
+
+    <p>used to select a specific element</p>
+
+</section>
+
+<section>
+    <h2>Class based selectors</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    <div class="main">
+        CONTENT
+    </div>
+
+    <div id="other" class="main">
+        OTHER CONTENT
+    </div>
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    .main {
+        width: 100px;
+    }
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+        </div>
+    </div>
+
+    <p>used to select multiple elements with a specific class attribute</p>
+</section>
+
+<section>
+    <h2>Grouping</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    h1 {
+        text-align: center;
+        color: red;
+    }
+
+    h2 {
+        text-align: center;
+        color: red;
+    }
+
+    p {
+        text-align: center;
+        color: red;
+    }
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    h1, h2, p {
+        text-align: center;
+        color: red;
+    }
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Descendant selectors</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    &lt;section class="wrapper">
+
+        <div class="main">
+
+            <p>CONTENT</p>
+
+        </div>
+
+    &lt;/section>
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    .wrapper p {
+        color: Yellow;
+    }
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <h2>Child selectors</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    &lt;section class="wrapper">
+
+        <div class="main">
+
+            <p>CONTENT</p>
+
+        </div>
+
+    &lt;/section>
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    .main > p {
+        color: Yellow;
+    }
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Universal selector</h2>
+
+    <!--@formatter:off-->
+                <pre><code>
+    * {
+        margin: 0;
+        padding:0;
+    }
+                </code></pre>
+    <!--@formatter:on-->
+
+    <p>selects every element</p>
+</section>
+
+<section>
+    <h2>Adjacent sibling selectors</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+
+    <div class="main">
+
+    </div>
+
+    <p>CONTENT</p>
+
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    .main + p {
+        color: Yellow;
+    }
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+        </div>
+    </div>
+
+    <p>selects the sibling immediately following another element</p>
+</section>
+
+<section>
+    <h2>Parent selectors</h2>
+
+    <p>there are no parent selectors in CSS</p>
+</section>
+
+<section>
+    <h2>Attribute selector</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+
+    &lt;img alt="cars" src="cars.png" />
+
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+            <div class="col-xs-6">
+
+                <!--@formatter:off-->
+                <pre><code>
+    img[alt="cars"] {
+        width: 100%;
+    }
+                </code></pre>
+                <!--@formatter:on-->
+
+            </div>
+        </div>
+    </div>
+
 </section>

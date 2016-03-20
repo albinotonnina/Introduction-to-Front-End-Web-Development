@@ -1,0 +1,105 @@
+
+
+
+<section>
+    <h2>CSS selectors specificity calculator</h2>
+
+    <!--<div class="container-fluid">-->
+    <!--<div class="col-md-11"><input id="specificity-input" class="form-control input-lg" type="text" palceholder="ul#nav li.active a" value="ul#nav li.active a"/></div>-->
+    <!--<div class="col-md-1"><button class="btn btn-primary btn-lg" id="get-specificity">get specificity</button></div>-->
+    <!--</div>-->
+
+
+    <div class="input-group">
+
+        <input id="specificity-input" class="form-control input-lg" type="text" palceholder="ul#nav li.active a"
+               value="ul#nav li.active a"/>
+              <span class="input-group-btn">
+        <button class="btn btn-primary btn-lg" id="get-specificity">CALCULATE</button>
+      </span>
+    </div>
+
+
+    <div style="margin-top:32px;min-height:300px;max-height:500px;overflow: scroll;">
+        <table id="specificity-results" style="display:none;">
+            <thead>
+            <tr>
+                <th>selector</th>
+                <th>
+                    <div data-toggle="tooltip"
+                         title="a is equal to 1 if the declaration comes from a style attribute in the HTML (“inline styles”) rather than a CSS rule with a selector">
+                        a
+                    </div>
+                </th>
+                <th>
+                    <div data-toggle="tooltip" title="b is equal to the number of ID attributes in a selector.">b</div>
+                </th>
+                <th>
+                    <div data-toggle="tooltip"
+                         title="c is equal to the number of other attributes and pseudo-classes in a selector.">c
+                    </div>
+                </th>
+                <th>
+                    <div data-toggle="tooltip"
+                         title="d is equal to the number of elements and pseudo-elements in a selector.">d
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <button class="btn btn-default btn-lg" id="reset-specificity-results" style="display:none;">reset results</button>
+    <script>
+
+        var userSearches = [];
+
+        $('#reset-specificity-results').on('click', function () {
+            $('#specificity-results').find('tbody').html('');
+            userSearches = [];
+            $('#reset-specificity-results').hide();
+            $('#specificity-results').hide();
+        });
+
+        $('#get-specificity').on('click', function () {
+
+            var userInput = $('#specificity-input').val();
+            var specObj = SPECIFICITY.calculate(userInput);
+
+            if (specObj && userSearches.indexOf(specObj[0].selector) === -1) {
+                $('#reset-specificity-results').show();
+                $('#specificity-results').show();
+
+
+                console.log(specObj[0]);
+
+                var specificityArray = specObj[0].specificity.split(',');
+
+
+                userSearches.push(specObj[0].selector);
+                $('#specificity-results').append('<tr><td>' + specObj[0].selector + '</td><td>' + specificityArray[0] + '</td><td>' + specificityArray[1] + '</td><td>' + specificityArray[2] + '</td><td>' + specificityArray[3] + '</td></tr>');
+
+
+                $('[data-toggle="tooltip"]').tooltip({
+                    placement: 'auto'
+                });
+            }
+
+
+        });
+
+
+    </script>
+</section>
+
+<section>
+    <h2>Simple page layout</h2>
+    <div style="height:700px">
+        <p data-height="700" data-theme-id="0" data-slug-hash="grwYEM" data-default-tab="result" data-user="albino"
+           class="codepen">See the Pen <a href="http://codepen.io/albino/pen/grwYEM/">Layout</a> by Albino Tonnina (<a
+                href="http://codepen.io/albino">@albino</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+</section>
