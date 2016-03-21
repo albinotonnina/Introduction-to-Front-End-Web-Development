@@ -52,6 +52,16 @@ var initReveal = function () {
             }, callback: function () {
                 hljs.initHighlightingOnLoad();
                 hljs.initHighlighting();
+
+                $('.editr').each(function () {
+                    new Editr({
+                        el: this,
+                        path: 'steps',
+
+                        view: 'vertical',
+                        hide:'js'
+                    });
+                });
             }
             },
             {
