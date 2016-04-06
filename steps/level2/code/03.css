@@ -1,0 +1,27 @@
+body {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size:12px;
+    font-style: normal;
+}
+
+p {
+    color: white;
+    letter-spacing: initial;
+    line-height: 1;
+    text-align: left;
+    text-decoration: underline;
+    text-indent: 0;
+    text-transform: none;
+    word-spacing: normal;
+
+    font-size:32px;
+    font-weight: bold;
+}
+
+span {
+    font-style: italic;
+    font-size: 24px;
+    color: SlateGray;
+    display:block;
+    text-decoration: line-through;
+}

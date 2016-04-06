@@ -37,7 +37,7 @@ var initReveal = function () {
         progress: false,
         history: true,
         center: true,
-        showNotes: true,
+        showNotes: false,
         transition: 'fade', // none/fade/slide/convex/concave/zoom
         dependencies: [
 
@@ -54,14 +54,32 @@ var initReveal = function () {
                 hljs.initHighlighting();
 
                 $('.editr').each(function () {
+
+
+
+
                     new Editr({
                         el: this,
                         path: 'steps',
-
+                        theme: 'eclipse',
                         view: 'vertical',
-                        hide:'js'
+                        hide: 'js'
                     });
+
+
+
+
+
+
                 });
+
+                //setEditrScale();
+                //
+                //$(window).resize(function(){
+                //    setEditrScale();
+                //});
+
+
             }
             },
             {
@@ -80,9 +98,23 @@ var initReveal = function () {
     });
 
 
-
 };
 
+function setEditrScale () {
+
+    var element = $('.slides').get(0);
+    var scaleX = element.getBoundingClientRect().width / element.offsetWidth;
+
+    var editrScale = 1 + (1 - scaleX);
+
+    $('.editr').css({
+        '-webkit-transform' : 'scale(' + editrScale + ')',
+        '-moz-transform'    : 'scale(' + editrScale + ')',
+        '-ms-transform'     : 'scale(' + editrScale + ')',
+        '-o-transform'      : 'scale(' + editrScale + ')',
+        'transform'         : 'scale(' + editrScale + ')'
+    });
+}
 
 var preloadPictures = function (pictureUrls, callback) {
     var i,

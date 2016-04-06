@@ -6535,6 +6535,14 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.reveal .editr {
+  min-height: 680px; }
+  .reveal .editr .ace-eclipse .ace_gutter {
+    width: 56px; }
+  .reveal .editr .ace-eclipse .ace_scroller {
+    padding: 8px;
+    margin-right: -8px; }
+
 .reveal strong {
   color: #f68220; }
 
@@ -6583,6 +6591,8 @@ button.close {
   opacity: 0.3; }
   .reveal .speaker-notes p {
     margin: 4px;
+    font-size: 16px; }
+  .reveal .speaker-notes ul li {
     font-size: 16px; }
 
 nav {

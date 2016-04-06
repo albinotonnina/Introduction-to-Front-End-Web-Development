@@ -1,15 +1,33 @@
 div {
 
-    /* HEX value*/
-    background: #ffcc00;
-
     /* RGB value */
-    color: rgb(220, 20, 60);
+    color: rgb(255, 0, 0);
 
-    /* valid color name */
-    border: 10px solid green;
+    /* RGB value + alpha channel */
+    color: rgba(255, 0, 0, 1);
 
+    /* HEX triplet */
+    color: #FF0000;
+
+    /* Predefined/Cross-browser color names */
+    color: peachpuff;
+
+    color: red;
+
+    /* OTHER PROPERTIES THAT USE COLORS */
+    border: 10px solid red;
+
+    background: rgb(0, 255, 0);
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -36,8 +54,8 @@ div {
     box-sizing: border-box;
 }
 
-body{
-    height:2000px;
+body {
+    height: 2000px;
 }
 
 body {

@@ -1,0 +1,102 @@
+.static-positioning {
+    /*  Default value.
+    Elements render in order,
+    as they appear in the document flow
+    */
+    position: static;
+}
+
+.relative-positioning {
+    /*  The element is positioned
+    relative to its normal position
+    */
+    position: relative;
+
+    /* Sets the top/right/bottom/left
+    margin edge for a positioned box */
+    top: 100px;
+    left: 100px;
+}
+
+.absolute-positioning {
+    /*  The element is positioned
+    relative to its first positioned
+    (not static) ancestor element
+
+    Independent, out of the document flow.
+    */
+    position: absolute;
+
+    top: 100px;
+    right: 100px;
+    /*   left: 100px; */
+    /*   bottom: 100px; */
+
+    /* Sets the stack order of an element */
+    z-index: 1;
+}
+
+.fixed-positioning {
+    /* The element is positioned
+    relative to the browser window */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+section {
+    position: relative;
+    width: 700px;
+    height: 100%;
+    background: Cornsilk;
+
+    overflow: hidden;
+    /*  or  */
+    /*   overflow-x: hidden; */
+    /*   overflow-y: scroll; */
+}
+
+div {
+    width: 400px;
+    height: 200px;
+    padding: 20px 50px;
+    border: 25px solid tomato;
+    background: skyblue;
+    color: Ivory;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* demo styles */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    height:2000px;
+}
+
+body {
+    font-family: helvetica;
+    font-size: 28px;
+
+    margin: 0;
+}

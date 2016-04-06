@@ -1,0 +1,73 @@
+div {
+    width: 400px;
+    height: 200px;
+
+    /*   Box Model declarations */
+    padding: 20px 50px; /* padding is transparent */
+    margin: 50px; /* margin is transparent */
+    border: 25px solid tomato;
+
+    /*  Demo Styles  */
+    background: skyblue;
+    color: Ivory;
+}
+
+/*
+
+Box width:
+width + padding-left + padding-right +
+border-left + border-right
+
+Box height:
+height + padding-top + padding-bottom +
+border-top + border-bottom
+
+Any of these values can be undeclared
+
+The final size of this box is:
+
+width: 400px + 25px + 50px + 25px + 50px = 550px
+
+height: 200px + 25px + 20px + 25px + 20px = 290px
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* demo styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: helvetica;
+    font-size: 48px;
+    background: Cornsilk;
+    margin: 0;
+}

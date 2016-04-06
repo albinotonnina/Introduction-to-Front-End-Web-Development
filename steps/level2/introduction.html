@@ -1,10 +1,52 @@
 <section>
-    <div class="editr" data-item="level2" data-files-html="code/01.html" data-files-css="code/01.css" data-hide="js"></div>
+    <h2>Introduction to Front End Web Development</h2>
+    <h3>Level 2: CSS</h3>
 </section>
 
 <section>
-    <h2>Introduction to Front End Web Development</h2>
-    <h3>Level 2: CSS</h3>
+    <h2>History of CSS</h2>
+
+    <ul>
+        <li class='fragment fade-in'>Style sheets have existed in one form or another since the <strong>80s</strong>.
+        </li>
+        <li class='fragment fade-in'>CSS language first proposed in <strong>1994</strong>.</li>
+        <li class='fragment fade-in'>First W3C CSS Recommendation released in <strong>1996</strong>.</li>
+        <li class='fragment fade-in'>Fully adopted by a browser in <strong>2000</strong>: CSS 1 - IE 5 for Mac (!)</li>
+        <li class='fragment fade-in'>CSS 2.1 published as a W3C Recommendation in <strong>2011</strong>.</li>
+        <li class='fragment fade-in'>CSS3 Modules are published as a W3C Reccomendation since
+            <strong>2011</strong>.
+        </li>
+    </ul>
+
+    <aside class="notes">
+
+        <ul>
+            <li></li>
+            <li><p>One requirement for a web style sheet language was for style sheets to come from different
+                sources.</p>
+                <p>most of the existing style sheet languages were unable to meet that requirement.</p>
+                <p>CSS, on the other hand, allowed a document's style to be influenced by multiple style sheets, this is
+                    referred as cascading.</p>
+            </li>
+            <li>Discussions on public mailing lists and inside W3C resulted in the first W3C CSS Recommendation being
+                released in 1996.
+            </li>
+            <li></li>
+            <li></li>
+            <li><p>CSS 3 has a modular approach.</p>
+                <p>CSS3, modules: each of these modules is now an independent part of the language and moves towards
+                    standardization at its own pace. While some modules are already W3C Recommendations, other still are
+                    early
+                    Working Drafts.</p>
+                <p>Formally, there is no CSS3 standard per se. Each module being standardized independently, the
+                    standard CSS
+                    consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same
+                    level
+                    number.</p></li>
+        </ul>
+
+
+    </aside>
 </section>
 
 <section>
@@ -17,34 +59,31 @@
 </section>
 
 <section>
-    <h2>History of CSS</h2>
 
-    <ul>
-        <li>Style sheets have existed in one form or another since the <strong>80s</strong>.</li>
-        <li>CSS first proposed in <strong>1994</strong>.</li>
-        <li>First W3C CSS Recommendation released in <strong>1996</strong>.</li>
-        <li>Difficult adoption, fully adopted by a browser in <strong>2000</strong>: CSS 1 - IE 5 for Mac (!)</li>
-        <li>CSS 2.1 published as a W3C Recommendation in <strong>2011</strong>.</li>
-        <li>CSS 3 has a modular approach. Modules are published as a W3C Reccomendation since <strong>2011</strong>.
-        </li>
-    </ul>
+    <h2>in a perfect world</h2>
+
+    <p>
+        In front-end web development, separating content from presentation allows you the freedom to redesign an entire
+        site without touching the HTML.
+    </p>
+
+    <a href="http://www.csszengarden.com" target="_blank">CSS ZenGarden expressed this beautifully in 2003</a>
+</section>
+
+<section>
+    <h2>In the real world</h2>
+
+    <p>Presentation (<strong>CSS</strong>) is pointless without structure (<strong>HTML</strong>) and it's pointless to
+        separate the content from structure.</p>
 
     <aside class="notes">
-        <p>One requirement for a web style sheet language was for style sheets to come from different sources on the
-            web. </p>
-        <p>Therefore, existing style sheet languages like DSSSL and FOSI were not suitable.</p>
-        <p>CSS, on the other hand, allowed a document's style to be influenced by multiple style sheets by way of
-            "cascading"</p>
-        <p>Discussions on public mailing lists and inside W3C resulted in the first W3C CSS Recommendation being
-            released in 1996.</p>
-        <p>CSS3, modules: each of these modules is now an independent part of the language and moves towards
-            standardization at its own
-            pace. While some modules are already W3C Recommendations, other still are early Working Drafts.</p>
-        <p>Formally, there is no CSS3 standard per se . Each module being standardized independently, the standard CSS
-            consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same level
-            number.</p>
+        <p>Structure, presentation and content are tied together.</p>
+        <p>The HTML is built around the content.</p>
+        <p>Content contain structure (&lt;ul>&lt;/ul>) and structure contain presentation (presentational ids)</p>
+        <p>Presentation can and should be separated from content.</p>
     </aside>
 </section>
+
 
 <section>
     <h2>1999 - Pre CSS adoption</h2>
@@ -79,5 +118,11 @@
 &lt;/TR>
     </code></pre>
     <!--@formatter:on-->
+
+</section>
+
+<section>
+    <h2>Dilemma?</h2>
+    <img src="../../lib/images/level2/css.jpg">
 
 </section>

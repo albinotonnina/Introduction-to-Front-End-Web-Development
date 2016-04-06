@@ -32,6 +32,29 @@ $heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b
 
 .reveal {
 
+  .editr{
+    min-height: 680px;
+
+    .ace-eclipse {
+      .ace_gutter{
+        width:56px;
+      }
+
+      .ace_scroller{
+
+        padding: 8px;
+        margin-right: -8px;
+
+       .ace_content{
+         //padding:8px;
+         .ace_line{
+           //padding:12px 8px;
+         }
+       }
+      }
+    }
+  }
+  
   strong {
     color: #f68220;
   }
@@ -105,6 +128,10 @@ $heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b
 
     p {
       margin: 4px;
+      font-size: 16px;
+    }
+
+    ul li{
       font-size: 16px;
     }
   }

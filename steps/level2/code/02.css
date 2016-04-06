@@ -1,0 +1,45 @@
+div {
+    background: yellow;
+    color: red;
+
+    width: 500px;
+    /*   width: 80%; */
+    /*   width: 20cm; */
+    /*   width: 20em; */
+
+
+    height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* demo styles */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: helvetica;
+    font-size: 28px;
+    margin: 0;
+}

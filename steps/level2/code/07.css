@@ -1,0 +1,72 @@
+div {
+
+    background-color: #ffcc00;
+
+    background-image: url("dummy.png");
+
+    background-repeat: repeat;
+    /* other values: repeat-x, repeat-y, no-repeat */
+
+    background-position: left top;
+    /* other values:
+    right bottom,
+    center top etc,
+    50% 50%,
+    32px 64px */
+
+    /* BACKGROUND PROPERTY SHORTHAND */
+
+    /* Using a background-color */
+    background: yellow;
+
+    /* Using a bg-image and repeat-style */
+    background: url("dummy.png") repeat-x;
+
+    /* Using a box and background-color */
+    background: border-box yellow;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* demo styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 2000px;
+}
+
+body {
+    font-family: helvetica;
+    font-size: 28px;
+    margin: 0;
+}

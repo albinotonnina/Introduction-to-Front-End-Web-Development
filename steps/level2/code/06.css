@@ -1,0 +1,85 @@
+.content{
+    float: left;
+    background: darkgray;
+}
+
+.content2{
+    float: left;
+    background: red;
+}
+
+.content3{
+    clear: left;
+    background: aliceblue;
+}
+
+.content4{
+    background:saddlebrown;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.content, .content2, .content3, .content4{
+    width: 50%;
+    height: 200px;
+}
+
+
+/*clear*/
+
+
+/*display*/
+/*float*/
+/*visibility*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* demo styles */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    height:2000px;
+}
+
+body {
+    font-family: helvetica;
+    font-size: 28px;
+    margin: 0;
+}

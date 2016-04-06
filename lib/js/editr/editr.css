@@ -18,6 +18,20 @@
 .editr[data-hide*="css"] .editr__nav-item[data-type="css"],
 .editr[data-hide*="js"] .editr__nav-item[data-type="js"] { display: none; }
 
+
+.editr[data-hide-edit*="js"] .editr__editor--js{
+    display: none;
+}
+
+.editr[data-hide-edit*="js"].editr-view--vertical .editr__editor.active ~ .editr__editor--css{
+    height: 66.6666%;
+}
+
+
+.editr[data-hide-edit*="js"] .editr__editor--css{
+    height: 66.6666%;
+}
+
 .editr__bar {
     background: #fff;
     border-radius: 3px 3px 0 0;
@@ -28,6 +42,17 @@
     content: '';
     clear: both;
     display: table;
+}
+
+.editr__bar .editr__nav {
+    list-style-type: none;
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+
+.editr__bar .editr__nav .editr__nav-item{
+    padding-bottom:0;
 }
 
 .editr__nav {
@@ -142,6 +167,7 @@
     position: absolute;
     border: 1px solid #e4e6ea;
     border-top: 0;
+    list-style-type: none;
 }
 
 .editr__subnav .editr__nav-label {
@@ -158,6 +184,10 @@
 .editr__nav > :first-child .editr__subnav {
     left: 0;
     border-left: 0;
+}
+
+.editr__nav .editr__nav-item .editr__subnav {
+    display:none;
 }
 
 .editr__content {
@@ -239,6 +269,8 @@
 .editr-view--horizontal .editr__result {
     height: 60%;
     top: 40%;
+    max-width:100%;
+    max-height: 100%;
 }
 
 /** View - Vertical */
@@ -261,6 +293,8 @@
 .editr-view--vertical .editr__result {
     width: 60%;
     left: 40%;
+    max-width:100%;
+    max-height: 100%;
 }
 
 /** View - Cartesian */
@@ -279,14 +313,14 @@
 
 .editr-view--cartesian .editr__editor.active ~ .editr__editor.active ~ .editr__editor.active {
     left:0%;
-	top: 50%;
+    top: 50%;
 }
 
 .editr-view--cartesian .editr__result {
-	left: 50%;
-	top:50%;
-	width: 50%;
-	height: 50%;
+    left: 50%;
+    top:50%;
+    width: 50%;
+    height: 50%;
 }
 
 /** Loader */

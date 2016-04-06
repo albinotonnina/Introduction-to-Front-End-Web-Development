@@ -1,0 +1,32 @@
+/*
+links can be styled differently depending
+on what state they are in.
+*/
+
+a{
+    font-size: 24px;
+}
+
+/* LINK STATES */
+
+/* unvisited link */
+a:link {
+    color: blanchedalmond;
+}
+
+/* visited link */
+a:visited {
+    color: indianred;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: cornflowerblue;
+}
+
+
