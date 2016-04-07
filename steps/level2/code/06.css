@@ -1,81 +1,42 @@
-.content{
+/*
+The float CSS property specifies that an element
+should be taken from the normal flow and placed
+along the left or right side of its container,
+where text and inline elements
+will wrap around it.
+*/
+
+.content {
     float: left;
     background: darkgray;
 }
 
-.content2{
+.content2 {
     float: left;
     background: red;
 }
 
-.content3{
+.content3 {
     clear: left;
     background: aliceblue;
 }
 
-.content4{
-    background:saddlebrown;
+.content4 {
+    background: saddlebrown;
 }
 
-.invisible{
+.invisible {
     visibility: hidden;
 }
 
-.content, .content2, .content3, .content4{
-    width: 50%;
+.content, .content2, .content3, .content4 {
+    width: 25%;
     height: 200px;
 }
-
-
-/*clear*/
-
-
-/*display*/
-/*float*/
-/*visibility*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* demo styles */
 * {
     box-sizing: border-box;
-}
-
-body{
-    height:2000px;
 }
 
 body {
